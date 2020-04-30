@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "获取手机网络状态",
+  "usingComponents": {
+    "wx-ad": "/onekit/ui/ad/ad",
+    "wx-video": "/onekit/ui/video/video"
+  }
+}

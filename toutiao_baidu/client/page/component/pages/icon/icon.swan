@@ -1,0 +1,20 @@
+<import src="../../../common/head.swan"></import>
+<import src="../../../common/foot.swan"></import>
+
+<view  class="ttui-flex icon-line" s-for="{{icons}}" s-for-item="iconline">
+    <view  class="ttui-flex__item icon-single-wrapper" s-for="{{iconline}}" s-for-item="icon">
+        <label >
+            <icon  class="tt-icon" type="{{icon}}"></icon>
+            {{icon}}
+        </label>
+    </view>
+</view>
+
+<view  class="icon-wrapper" s-for="{{sizes}}">
+    <icon  class="tt-icon" size="{{item}}" type="success"></icon>
+    <view  class="icon-size">{{item}}</view>
+</view>
+
+<view  class="icon-wrapper" s-for="{{colors}}">
+    <icon  class="tt-icon" size="36" color="{{item}}" type="success"></icon>
+</view>

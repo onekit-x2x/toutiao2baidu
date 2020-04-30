@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "ad",
+  "usingComponents": {
+    "wx-ad": "/onekit/ui/ad/ad",
+    "wx-video": "/onekit/ui/video/video"
+  }
+}

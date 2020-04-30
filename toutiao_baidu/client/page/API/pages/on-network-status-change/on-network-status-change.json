@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "监听手机网络变化",
+  "usingComponents": {
+    "wx-ad": "/onekit/ui/ad/ad",
+    "wx-video": "/onekit/ui/video/video"
+  }
+}

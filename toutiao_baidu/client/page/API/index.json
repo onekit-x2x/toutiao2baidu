@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "小程序接口能力展示",
+  "set-tab-bar": "./components",
+  "usingComponents": {
+    "wx-ad": "/onekit/ui/ad/ad",
+    "wx-video": "/onekit/ui/video/video"
+  }
+}

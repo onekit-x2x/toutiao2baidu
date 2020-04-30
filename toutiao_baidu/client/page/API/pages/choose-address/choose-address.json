@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "收货地址",
+  "usingComponents": {
+    "wx-ad": "/onekit/ui/ad/ad",
+    "wx-video": "/onekit/ui/video/video"
+  }
+}

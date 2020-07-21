@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "头条登录",
-  "usingComponents": {
-    "wx-ad": "/onekit/ui/ad/ad",
-    "wx-video": "/onekit/ui/video/video"
-  }
-}

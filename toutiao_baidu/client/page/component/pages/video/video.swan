@@ -1,12 +1,47 @@
-<import src="../../../common/head.swan"></import>
-<import src="../../../common/foot.swan"></import>
+<view Class="container">
+  <view Class="body body-space-l">
+  
+    <view Class="page-section">
+      <onekit-video id="myVideo"
+        src="https://sf1-ttcdn-tos.pstatp.com/obj/developer/sdk/1534422848153.mp4"
+        binderror="videoErrorCallback"
+        Style="width: 100%;"
+        poster=""
+        show-fullscreen-btn="{{isFullscreen}}"
+        show-play-btn="{{isShowPlayBtn}}"
+        loop="{{isLoopPlay}}"
+        controls="{{isShowControls}}"
+        play-btn-position="{{playBtnPosition}}"
+        object-fit="{{objectFitType}}"
+      ></onekit-video>
+    </view>
 
-<view  class="container">
-  <template  is="head" data="{{title: 'video'}}"></template>
+    <view Class="btn-set-row">
+      <button type="mini" size="mini" bindtap="switchFullScreen">
+        {{isFullscreen ? '隐藏全屏按钮' : '显示全屏按钮'}}
+      </button>
+      <button type="mini" size="mini" bindtap="switchLoopPlay">
+        {{isLoopPlay ? '关闭循环播放' : '开启循环播放'}}
+      </button>
+    </view>
 
-  <view  class="page-body">
-    <view  class="page-section tc">
-      <wx-video  id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback"></wx-video>
-  <template  is="foot"></template>
+    <view Class="btn-set-row">
+      <button type="mini" size="mini" bindtap="switchPlayBtn">
+        {{isShowPlayBtn ? '隐藏播放按钮' : '显示播放按钮'}}
+      </button>
+      <button type="mini" size="mini" bindtap="switchControls">
+        {{isShowControls ? '隐藏全部控件' : '显示全部控件'}}
+      </button>
+    </view>
+
+    <view Class="btn-set-row">
+      <button type="mini" size="mini" bindtap="switchPlayBtnPosition">
+        {{playBtnPosition === 'center' ? '播放按钮下移' : '播放按钮居中'}}
+      </button>
+      <button type="mini" size="mini" bindtap="switchFit">
+        裁剪模式切换
+      </button>
+    </view>
+
+  </view>
 </view>
-</view></view>

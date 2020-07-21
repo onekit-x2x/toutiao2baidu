@@ -1,4 +1,8 @@
 import onekit from "onekit"
+import CanvasContext from "./api/CanvasContext.js"
+import VideoContext from "./api/VideoContext.js"
+import LivePlayerContext from "./api/LivePlayerContext.js"
+import Context from "./api/Context.js"
 export default class tt {
   /////////////////// animation //////////////////////////
   static createAnimation(object) { return swan.createAnimation(object); }
@@ -20,8 +24,16 @@ export default class tt {
   static onAppHide(object) { return swan.onAppHide(object); }
   static setEnableDebug(object) { return swan.setEnableDebug(object); }
   static getLogManager(object) { return swan.getLogManager(object); }
-  static createContext() { return new CanvasContext(); }
-  static createCanvasContext(object) { return swan.createCanvasContext(object ); }
+  static createContext() { return new Context(); }
+//   static createCanvasContext(canvasId) {
+//     return new CanvasContext(swan.createCanvasContext(canvasId));
+//   }
+   static createLivePlayerContext(livePlayerId) {
+    return new LivePlayerContext(swan.createLivePlayerContext(livePlayerId));
+  }
+   static createVideoContext(videoId) {
+    return new VideoContext(swan.createVideoContext(videoId));
+  }
   static canvasToTempFilePath(object) { return swan.canvasToTempFilePath(object); }
   static canvasPutImageData(object) { return swan.canvasPutImageData(object) };
   static canvasGetImageData(object) { return swan.canvasGetImageData(object) };
@@ -183,19 +195,193 @@ export default class tt {
   static offLocalServiceFound(callback) { return swan.offLocalServiceFound(callback); }
   static offLocalServiceDiscoveryStop(callback) { return swan.offLocalServiceDiscoveryStop(callback); }
   ///////// Open Interface //////////
-  static checkSession(object) { return swan.checkSession(object); }
+  static _checkSession() {
+    var now = new Date().getTime();
+    return getApp().onekitwx._jscode && getApp().onekitwx._login && now <= getApp().onekitwx._login + 1000 * 60 * 60 * 24 * 3;
+  }
+  
+  static checkSession(object) {
+    if (tt._checkSession()) {
+      if (object.success) {
+        object.success();
+      }
+      if (object.complete) {
+        object.complete();
+      }
 
-  static login = function (object) { return swan.login(object); }
-  static getUserInfo(object) { return swan.getUserInfo(object); }
+    } else {
+      if (object.fail) {
+        object.fail();
+      }
+      if (object.complete) {
+        object.complete();
+      }
+    }
+  }
+
+  static login = function (object) {
+    var that = this;
+    if (!object) {
+      return swan.login(object);
+    }
+    var object2 = { };
+    object2.success = function (res) {
+      getApp().onekitwx._jscode = res.code;
+      getApp().onekitwx._login = new Date().getTime();
+      var result = { code: res.code };
+      if (object.success) {
+        object.success(result);
+      }
+      if (object.complete) {
+        object.complete(complete);
+      }
+    }
+    object2.fail = function (res) {
+      if (object.fail) {
+        object.fail(res);
+      }
+      if (object.complete) {
+        object.complete(res);
+      }
+    }
+    if (tt._checkSession()) {
+      object2.success({ code: getApp().onekitwx._jscode });
+    } else {
+      swan.login(object2);
+    }
+  };
+ static _getUserInfo(data, callback) {
+    tt.login({
+      success(res){
+        console.log(res);
+        var code = res.code;
+        var withCredentials = getApp().onekitwx.getuserinfo_withCredentials === true;
+        var url = getApp().onekitwx.server + "userinfo";
+        swan.request({
+            url: url, 
+            header: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+             },
+             method: 'POST',
+             data:{
+             code,
+             withCredentials,
+             data : JSON.stringify(data)
+             },
+             success(res){
+              callback(res.data);
+             },
+             fail(res){
+              console.log(res);
+              callback(res);
+            }
+            })
+          },fail(res){
+            console.log(res);
+          }
+
+        })
+    }
+  static getUserInfo(object) {
+      getApp().onekitwx.getuserinfo_withCredentials = object.withCredentials;
+    getApp().onekitwx.getuserinfo = (data) => {
+      tt._getUserInfo(data, (res) => {
+        if (object.success) {
+          object.success(res);
+        }
+        if (object.complete) {
+          object.complete(res);
+        }
+      });
+    }
+    swan.navigateTo({
+      url: '/onekitwx/page/getuserinfo/getuserinfo'
+    })
+  };
   static getOpenData = function (object) { return swan.getOpenData(object); }
-  static getPhoneNumber = function (object) { return swan.getPhoneNumber(object); }
+  static _getPhoneNumber = function (data, callback) {
+    tt.login({
+      success: (res) => {
+        var code = res.code;
+        var url = getApp().onekitwx.server + "phonenumber";
+        console.log(data);
+        swan.request({
+          url: url,
+          header: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          method: "POST",
+          data: {
+            data: JSON.stringify(data),
+            code: code
+          },
+          success(res) {
+            var data = res.data;
+            callback(data);
+          }, fail(res) {
+            console.log(res.data);
+          }
+        });
+      }
+    });
+  }
+  static getPhoneNumber = function (object) {
+    getApp().onekitwx._bindgetphonenumber = (data) => {
+      tt._getPhoneNumber(data, (res) => {
+        if (object.success) {
+          object.success(res);
+        }
+        if (object.complete) {
+          object.complete(res);
+        }
+      });
+    }
+    swan.navigateTo({ url: "page/getphonenumber" });
+  };
   static navigateToMiniProgram(object) { return swan.navigateToMiniProgram(object) }
   static navigateBackMiniProgram(object) { return swan.navigateBackMiniProgram(object) }
   static getAccountInfoSync(object) { return swan.getAccountInfoSync(object) }
 
   static reportMonitor(object) { return swan.reportMonitor(object) }
   static reportAnalytics(object, eventName) { return swan.reportAnalytics(object, eventName) }
-  static requestPayment(object) { return swan.requestPayment(object); }
+  static pay(object) { 
+    var url = getApp().onekitwx.server + "orderinfo";
+    swan.request({
+      url : url,
+      method : "POST",
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data:{
+        orderInfo : JSON.stringify(object.orderInfo)
+      },
+      success(res) {
+          console.log(res);
+        var data = {
+          out_order_no : res.data.tpOrderId
+        };
+        swan.requestPolymerPayment({
+          orderInfo:res.data,
+          success(res){
+            if (object.getOrderStatus) {
+              object.getOrderStatus(data);
+              console.log("ok");
+            }
+          },fail(res){
+            console.log(res);
+          }
+        })
+     
+      },
+      fail(res) {
+        console.log(res);
+      },
+      fail(res){
+        console.log(res);
+      }
+    });
+
+  };
   static authorize(object) { return swan.authorize(object) }
   static openSetting(object) { return swan.openSetting(object) }
   static getSetting(object) { return swan.getSetting(object) }

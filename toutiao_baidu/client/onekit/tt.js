@@ -1,8 +1,8 @@
 import onekit from "onekit"
-import CanvasContext from "./api/CanvasContext.js"
+// import CanvasContext from "./api/CanvasContext.js"
 import VideoContext from "./api/VideoContext.js"
 import LivePlayerContext from "./api/LivePlayerContext.js"
-import Context from "./api/Context.js"
+// import Context from "./api/Context.js"
 export default class tt {
   /////////////////// animation //////////////////////////
   static createAnimation(object) { return swan.createAnimation(object); }

@@ -1,7 +1,7 @@
-<view Class="container">
-  <view Class="body body-space-l">
+<onekit-view Class="container">
+  <onekit-view Class="body body-space-l">
   
-    <view Class="page-section">
+    <onekit-view Class="page-section">
       <onekit-video id="myVideo"
         src="https://sf1-ttcdn-tos.pstatp.com/obj/developer/sdk/1534422848153.mp4"
         binderror="videoErrorCallback"
@@ -14,34 +14,34 @@
         play-btn-position="{{playBtnPosition}}"
         object-fit="{{objectFitType}}"
       ></onekit-video>
-    </view>
+    </onekit-view>
 
-    <view Class="btn-set-row">
+    <onekit-view Class="btn-set-row">
       <button type="mini" size="mini" bindtap="switchFullScreen">
         {{isFullscreen ? '隐藏全屏按钮' : '显示全屏按钮'}}
       </button>
       <button type="mini" size="mini" bindtap="switchLoopPlay">
         {{isLoopPlay ? '关闭循环播放' : '开启循环播放'}}
       </button>
-    </view>
+    </onekit-view>
 
-    <view Class="btn-set-row">
+    <onekit-view Class="btn-set-row">
       <button type="mini" size="mini" bindtap="switchPlayBtn">
         {{isShowPlayBtn ? '隐藏播放按钮' : '显示播放按钮'}}
       </button>
       <button type="mini" size="mini" bindtap="switchControls">
         {{isShowControls ? '隐藏全部控件' : '显示全部控件'}}
       </button>
-    </view>
+    </onekit-view>
 
-    <view Class="btn-set-row">
+    <onekit-view Class="btn-set-row">
       <button type="mini" size="mini" bindtap="switchPlayBtnPosition">
         {{playBtnPosition === 'center' ? '播放按钮下移' : '播放按钮居中'}}
       </button>
       <button type="mini" size="mini" bindtap="switchFit">
         裁剪模式切换
       </button>
-    </view>
+    </onekit-view>
 
-  </view>
-</view>
+  </onekit-view>
+</onekit-view>

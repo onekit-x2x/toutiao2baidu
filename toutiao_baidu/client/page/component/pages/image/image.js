@@ -1,15 +1,8 @@
 import tt from "../../../../onekit/tt"
 
-const config = require('../../../../config')
-
 Page({
-  onShareAppMessage() {
-    return {
-      title: 'image',
-      path: 'page/component/pages/image/image'
-    }
-  },
   data: {
-    imageUrl: config.downloadExampleUrl
+    url: "https://s3.pstatp.com/toutiao/static/img/logo.201f80d.png"
   }
 })
+

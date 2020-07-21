@@ -1,0 +1,11 @@
+<icon
+class="onekit-text {{Class}}"
+style="{{Style}}"
+type="{{type}}"
+size="{{size}}"
+color="{{color}}"
+
+>
+    <slot>
+    </slot>
+</icon>

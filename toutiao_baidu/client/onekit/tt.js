@@ -1,5 +1,5 @@
 import onekit from "onekit"
-// import CanvasContext from "./api/CanvasContext.js"
+import CanvasContext from "./api/CanvasContext.js"
 import VideoContext from "./api/VideoContext.js"
 import LivePlayerContext from "./api/LivePlayerContext.js"
 // import Context from "./api/Context.js"
@@ -25,9 +25,9 @@ export default class tt {
   static setEnableDebug(object) { return swan.setEnableDebug(object); }
   static getLogManager(object) { return swan.getLogManager(object); }
   static createContext() { return new Context(); }
-//   static createCanvasContext(canvasId) {
-//     return new CanvasContext(swan.createCanvasContext(canvasId));
-//   }
+  static createCanvasContext(canvasId) {
+    return new CanvasContext(swan.createCanvasContext(canvasId));
+  }
    static createLivePlayerContext(livePlayerId) {
     return new LivePlayerContext(swan.createLivePlayerContext(livePlayerId));
   }

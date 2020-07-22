@@ -1,20 +1,51 @@
 {
     "editor": {
-        "curPath": "D:\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\image\\image.swan",
+        "curPath": "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\tt.js",
         "expands": [
-            "D:\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit",
-            "D:\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page",
-            "D:\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component",
-            "D:\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages",
-            "D:\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\image"
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\canvas",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\api",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\canvas",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\API",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\API\\pages",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\API\\pages\\canvas"
         ],
         "markdownUploadTimeMap": {},
         "paths": [
-            "D:\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\image\\image.swan"
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\app.json",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\canvas\\canvas.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\api\\CanvasContext.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\tt.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\api\\LivePlayerContext.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\canvas\\canvas.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\API\\pages\\canvas\\canvas.js",
+            "search"
         ],
         "recentlyFiles": [
-            "D:\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\image\\image.swan",
-            "D:\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\image\\image.json"
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\tt.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\canvas\\canvas.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\API\\pages\\canvas\\canvas.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\canvas\\canvas.json",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\app.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\app.json",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\canvas\\canvas.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\live-player\\live-player.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\live-player\\live-player.json",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\icon\\icon.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\icon\\icon.json",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\ad\\ad.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\button\\button.css",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\canvas\\canvas.swan",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\page\\component\\pages\\canvas\\canvas.css",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\canvas\\canvas.css",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\canvas\\canvas.json",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\ui\\canvas\\canvas.swan",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\api\\VideoContext.js",
+            "D:\\work\\GIT\\github.com\\toutiao2baidu\\toutiao_baidu\\client\\onekit\\api\\LivePlayerContext.js"
         ]
     }
 }

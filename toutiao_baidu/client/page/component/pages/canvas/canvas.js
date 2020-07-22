@@ -1,4 +1,4 @@
-import tt from "../../../../onekit/tt"
+import tt from "../../../../onekit/tt.js"
 
 Page({
     onLoad(res) {

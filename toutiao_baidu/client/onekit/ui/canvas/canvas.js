@@ -1,4 +1,7 @@
 Component({
+options: {
+        addGlobalClass: true,
+    },
     properties: {
         propName: { // 属性名
             Class:{
@@ -20,8 +23,6 @@ Component({
 
     // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
     attached: function () {},
-
-    detached: function () {},
 
     methods: {
         onTap: function () {

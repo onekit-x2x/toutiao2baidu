@@ -1,6 +1,9 @@
 Component({
+
     properties: {
     "ad-type":{
+    Class:String,
+    Style:String,
     type: String,
     value: 'banner', 
     }

@@ -2,8 +2,18 @@ Component({
 
     properties: {
     "ad-type":{
-    Class:String,
-    Style:String,
+            Class: {
+                type: String,
+                value: ""
+            },
+            Style: {
+                type: String,
+                value: ""
+            },
+            Id: {
+                type: String,
+                value: ""
+            },
     type: String,
     value: 'banner', 
     }

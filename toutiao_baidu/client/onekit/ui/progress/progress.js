@@ -1,4 +1,7 @@
 Component({
+ options: {
+        addGlobalClass: true,
+    },
     properties: {
         percent: {
             type: Number, observer: function (newVal, oldVal, changedPath) {

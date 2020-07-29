@@ -13,7 +13,6 @@ vertical="{{vertical}}"
 previous-margin="{{previousMargin}}"
 next-margin="{{nextMargin}}"
 display-multiple-items="{{displayMultipleItems}}"
-
 >
 <slot></slot>
 </swiper>

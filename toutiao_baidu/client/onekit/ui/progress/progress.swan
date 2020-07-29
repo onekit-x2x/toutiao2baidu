@@ -1,6 +1,7 @@
 <view  style="display:flex;align-items:center;">
    <progress
-   style="flex-grow:2;--borderRadius:{{borderRadius}}"
+   class="onekit-progress {{Class}}"
+   style="flex-grow:2;--borderRadius:{{borderRadius}} {{Style}}"
    percent="{{percent}}" 
    stroke-width="{{strokeWidth}}"
    color="{{color}}"

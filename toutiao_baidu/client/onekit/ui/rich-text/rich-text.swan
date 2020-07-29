@@ -1,3 +1,7 @@
-<view class="container">
-    <!--to do-->
-</view>
+<rich-text
+class="onekit-rich-text {{Class}}"
+style="{{Style}}"
+nodes="{{nodes}}"
+>
+
+</rich-text>

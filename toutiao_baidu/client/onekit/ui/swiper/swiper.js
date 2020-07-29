@@ -65,5 +65,14 @@ Component({
     detached: function () { },
 
     methods: {
+    swiper_Change(e){
+        this.triggerEvent('change',e)
+      },
+    swiper_AnimationEnd(e){
+        this.triggerEvent('animationfinish',e)
+      },
+    swiper_transition(e){
+        this.triggerEvent('transition',e)
+      }
     }
 });

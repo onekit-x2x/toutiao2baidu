@@ -13,6 +13,9 @@ vertical="{{vertical}}"
 previous-margin="{{previousMargin}}"
 next-margin="{{nextMargin}}"
 display-multiple-items="{{displayMultipleItems}}"
+bindchange="swiper_Change"
+bindanimationfinish="swiper_AnimationEnd"
+bindtransition="swiper_transition"
 >
 <slot></slot>
 </swiper>

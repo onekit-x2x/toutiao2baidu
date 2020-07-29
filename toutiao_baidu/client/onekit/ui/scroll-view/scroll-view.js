@@ -1,5 +1,5 @@
 Component({
- options: {
+    options: {
         addGlobalClass: true,
     },
     properties: {
@@ -39,33 +39,21 @@ Component({
             type: Boolean,
             value: false,
         },
-        // "bindscrolltoupper": {
-        //     type: Eventhandle, 
-        //     value:"", 
-        // },
-        // "bindscrolltolower": {
-        //     type: Eventhandle, 
-        //     value:"", 
-        // },
-        // "bindscroll": {
-        //     type: Eventhandle, 
-        //     value:"", 
-        // }
     },
     data: {},
     lifetimes: {
         attached: function () {
-            /* if(this.properties.scrollX){
-                 swan.createSelectorQuery()
-                       //  .in(this)
-                         .selectAll("page")
-                         .boundingClientRect(res => {
-                             console.log("xxx",res)
-                         }).exec();
-                 
-             }*/
         }
     },
     methods: {
+        on_toupper(e) {
+            this.triggerEvent('scrolltoupper', {})
+        },
+        on_tolower(e) {
+            this.triggerEvent('scrolltolower', {})
+        },
+        on_scroll(e) {
+            this.triggerEvent('scroll', {})
+        }
     }
 });

@@ -2,6 +2,7 @@
    <progress
    class="onekit-progress {{Class}}"
    style="flex-grow:2;--borderRadius:{{borderRadius}} {{Style}}"
+   id="{{Id}}"
    percent="{{percent}}" 
    stroke-width="{{strokeWidth}}"
    color="{{color}}"

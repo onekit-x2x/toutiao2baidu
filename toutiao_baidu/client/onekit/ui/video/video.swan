@@ -1,6 +1,7 @@
 <video  
 id="video"
 src="{{src}}" 
+id="{{Id}}"
 controls="{{controls}}" 
 autoplay="{{autoplay}}" 
 loop="{{loop}}" 

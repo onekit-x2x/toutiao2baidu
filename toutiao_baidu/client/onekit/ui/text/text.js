@@ -3,6 +3,18 @@ Component({
         addGlobalClass: true,
     },
     properties: {
+    Class: {
+                type: String,
+                value: ""
+            },
+            Style: {
+                type: String,
+                value: ""
+            },
+            Id: {
+                type: String,
+                value: ""
+            },
         space: {
             type:String,
             value:"",

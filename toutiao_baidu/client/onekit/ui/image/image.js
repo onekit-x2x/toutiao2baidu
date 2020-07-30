@@ -15,6 +15,18 @@ Component({
             type: Boolean, 
             value: false, 
         },
+        Class: {
+                type: String,
+                value: ""
+            },
+            Style: {
+                type: String,
+                value: ""
+            },
+            Id: {
+                type: String,
+                value: ""
+            },
     },
     methods: {
        image_error(e){

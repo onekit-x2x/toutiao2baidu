@@ -3,10 +3,18 @@ Component({
         addGlobalClass: true,
     },
     properties: {
-        style: { 
-            type: String,
-            value: "", 
-        }
+            Class: {
+                type: String,
+                value: ""
+            },
+            Style: {
+                type: String,
+                value: ""
+            },
+            Id: {
+                type: String,
+                value: ""
+            },
     },
 
     data: {}, // 私有数据，可用于模版渲染

@@ -2,11 +2,15 @@ Component({
 
     properties: {
     "ad-type":{
-            Class: {
+            
+    type: String,
+    value: 'banner', 
+    },
+    onekitClass: {
                 type: String,
                 value: ""
             },
-            Style: {
+            onekitStyle: {
                 type: String,
                 value: ""
             },
@@ -14,9 +18,6 @@ Component({
                 type: String,
                 value: ""
             },
-    type: String,
-    value: 'banner', 
-    }
     },
 
     data: {}, // 私有数据，可用于模版渲染

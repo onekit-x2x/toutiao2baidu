@@ -1,6 +1,6 @@
 <icon
-class="onekit-text {{Class}}"
-style="{{Style}}"
+class="onekit-text {{onekitClass}}"
+style="{{onekitStyle}}"
 id="{{Id}}"
 type="{{type}}"
 size="{{size}}"

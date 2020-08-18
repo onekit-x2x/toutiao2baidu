@@ -15,11 +15,11 @@ Component({
             type: Boolean, 
             value: false, 
         },
-        Class: {
+        onekitClass: {
                 type: String,
                 value: ""
             },
-            Style: {
+            onekitStyle: {
                 type: String,
                 value: ""
             },
@@ -30,12 +30,10 @@ Component({
     },
     methods: {
        image_error(e){
-       console.log("image_error", e);
-        this.triggerEvent('error',e.details)
+        this.triggerEvent('error',e)
        },
        image_load(e){
-       console.log("image_load", e);
-        this.triggerEvent('load',e.details)
+        this.triggerEvent('load',e)
        },
     }
 });

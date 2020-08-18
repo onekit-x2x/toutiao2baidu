@@ -4,11 +4,11 @@ Component({
     },
     properties: {
         propName: { // 属性名
-            Class: {
+            onekitClass: {
                 type: String,
                 value: ""
             },
-            Style: {
+            onekitStyle: {
                 type: String,
                 value: ""
             },

@@ -11,11 +11,11 @@ Component({
      }
      },
     properties: {
-    Class: {
+    onekitClass: {
                 type: String,
                 value: ""
             },
-            Style: {
+            onekitStyle: {
                 type: String,
                 value: ""
             },
@@ -64,32 +64,25 @@ Component({
     },
      methods: {
        video_play(e){
-       console.log("video_play", e);
-        this.triggerEvent('play',e.details)
+        this.triggerEvent('play',e)
        },
        video_pause(e){
-       console.log("video_pause", e);
-        this.triggerEvent('pause',e.details)
+        this.triggerEvent('pause',e)
        },
        video_ended(e){
-       console.log("video_ended", e);
-        this.triggerEvent('ended',e.details)
+        this.triggerEvent('ended',e)
        },
        video_timeupdate(e){
-       console.log("video_timeupdate", e);
-        this.triggerEvent('timeupdate',e.details)
+        this.triggerEvent('timeupdate',e)
        },
        video_fullscreenchange(e){
-       console.log("video_fullscreenchange", e);
-        this.triggerEvent('fullscreenchange',e.details)
+        this.triggerEvent('fullscreenchange',e)
        },
        video_waiting(e){
-       console.log("video_waiting", e);
-        this.triggerEvent('waiting',e.details)
+        this.triggerEvent('waiting',e)
        },
        video_error(e){
-       console.log("video_error", e);
-        this.triggerEvent('error',e.details)
+        this.triggerEvent('error',e)
        },
     }
 });

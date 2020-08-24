@@ -1,7 +1,7 @@
 <icon
 class="onekit-text {{onekitClass}}"
 style="{{onekitStyle}}"
-id="{{Id}}"
+id="{{onekitId}}"
 type="{{type}}"
 size="{{size}}"
 color="{{color}}"

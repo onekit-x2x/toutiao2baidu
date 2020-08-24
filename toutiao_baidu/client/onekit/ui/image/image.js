@@ -23,7 +23,7 @@ Component({
                 type: String,
                 value: ""
             },
-            Id: {
+            onekitId: {
                 type: String,
                 value: ""
             },

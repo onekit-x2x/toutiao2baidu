@@ -11,7 +11,7 @@ Component({
                 type: String,
                 value: ""
             },
-        Id: { type: String, value: "" },
+        onekitId: { type: String, value: "" },
         hoverClass: {
             type: String,
             value: ""

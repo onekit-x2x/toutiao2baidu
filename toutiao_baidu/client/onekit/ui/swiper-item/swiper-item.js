@@ -3,10 +3,18 @@ Component({
         addGlobalClass: true,
     },
     properties: {
-       Id:{
+       onekitId:{
        type:String,
        value:''
-       }
+       },
+        onekitClass: {
+                type: String,
+                value: ""
+            },
+            onekitStyle: {
+                type: String,
+                value: ""
+            },
     },
 
     data: {}, // 私有数据，可用于模版渲染

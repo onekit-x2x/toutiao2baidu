@@ -1,24 +1,69 @@
-Component({
-  properties: {
-    propName: { // 属性名
-      type: String, // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
-      value: 'val', // 属性初始值（必填）
+/* eslint-disable no-console */
+/* eslint-disable camelcase */
+import onekit_behavior from '../../behavior/onekit_behavior'
+import wxs_behavior from '../../behavior/wxs_behavior'
+import weixin_behavior from '../../behavior/weixin_behavior'
 
-    }
+Component({
+  behaviors: [onekit_behavior, wxs_behavior, weixin_behavior],
+  options: {
+    addGlobalClass: true,
+  },
+  properties: {
+    min: {
+      type: Number,
+      value: 0
+    },
+    max: {
+      type: Number,
+      value: 100
+    },
+    step: {
+      type: Number,
+      value: 1
+    },
+    disabled: {
+      type: Boolean,
+      value: false
+    },
+    color: {
+      type: String,
+      value: '#e9e9e9'
+    },
+    selectedColor: {
+      type: String,
+      value: '#1aad19'
+    },
+    activeColor: {
+      type: String,
+      value: '#1aad19'
+    },
+    backgroundColor: {
+      type: String,
+      value: '#1aad19'
+    },
+    blockSize: {
+      type: Number,
+      value: 28
+    },
+    blockColor: {
+      type: String,
+      value: '#ffffff'
+    },
+    showValue: {
+      type: Number,
+      value: 0
+    },
   },
 
-  data: {}, // 私有数据，可用于模版渲染
-
-  // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
-  attached() {},
-
-  detached() {},
-
   methods: {
-    onTap() {
-      this.setData({
-        // 更新属性和数据的方法与更新页面数据的方法类似
-      })
+    slider_Change(e) {
+      console.log('slider_Change', e)
+      this.triggerEvent('Change', e.details)
+    },
+    slider_Changing(e) {
+      console.log('slider_Changing', e)
+      this.triggerEvent('Changing', e.details)
     }
   }
 })

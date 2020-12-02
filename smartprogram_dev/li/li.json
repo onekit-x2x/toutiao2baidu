@@ -1,1 +1,4 @@
-{}
+{
+    "onekit-view":"../toutiao2baidu/ui/view",
+    "onekit-slider":"../toutiao2baidu/ui/slider"
+}

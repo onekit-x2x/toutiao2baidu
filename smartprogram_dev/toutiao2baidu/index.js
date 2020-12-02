@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -887,12 +887,56 @@ exports.default = tt;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+exports.default = {
+    methods: {
+        selectComponent: function selectComponent(selector) {},
+        selectAllComponents: function selectAllComponents(selctor) {},
+        setStyle: function setStyle(styleDict) {
+            var onekit_styles = '';
+            for (var _iterator = Object.keys(styleDict), _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+                var _ref;
+
+                if (_isArray) {
+                    if (_i >= _iterator.length) break;
+                    _ref = _iterator[_i++];
+                } else {
+                    _i = _iterator.next();
+                    if (_i.done) break;
+                    _ref = _i.value;
+                }
+
+                var cssName = _ref;
+
+                onekit_styles += cssName + ':' + styleDict[cssName] + ';';
+            }
+            this.setData({ onekit_styles: onekit_styles });
+        },
+        addClass: function addClass(className) {},
+        removeClass: function removeClass(className) {},
+        hasClass: function hasClass(className) {},
+        getDataset: function getDataset() {},
+        callMethod: function callMethod(funcName, args) {},
+        requestAnimationFrame: function requestAnimationFrame(callback) {},
+        getState: function getState() {},
+        getComputedStyle: function getComputedStyle(cssNames) {}
+    }
+};
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
 module.exports = require("oneutil");
 
 /***/ }),
-/* 2 */,
 /* 3 */,
 /* 4 */,
 /* 5 */,
@@ -902,7 +946,10 @@ module.exports = require("oneutil");
 /* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -910,19 +957,19 @@ module.exports = require("oneutil");
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.tt = exports.OnekitPage = exports.OnekitComponent = exports.OnekitBehavior = exports.OnekitApp = void 0;
-var OnekitApp_1 = __webpack_require__(13);
+var OnekitApp_1 = __webpack_require__(16);
 exports.OnekitApp = OnekitApp_1.default;
-var OnekitBehavior_1 = __webpack_require__(14);
+var OnekitBehavior_1 = __webpack_require__(17);
 exports.OnekitBehavior = OnekitBehavior_1.default;
-var OnekitComponent_1 = __webpack_require__(15);
+var OnekitComponent_1 = __webpack_require__(18);
 exports.OnekitComponent = OnekitComponent_1.default;
-var OnekitPage_1 = __webpack_require__(17);
+var OnekitPage_1 = __webpack_require__(19);
 exports.OnekitPage = OnekitPage_1.default;
 var tt_1 = __webpack_require__(0);
 exports.tt = tt_1.default;
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -938,7 +985,7 @@ function OnekitApp(tt_object) {
 }
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -947,7 +994,7 @@ function OnekitApp(tt_object) {
 exports.__esModule = true;
 exports.default = OnekitBehavior;
 
-var _oneutil = __webpack_require__(1);
+var _oneutil = __webpack_require__(2);
 
 var _oneutil2 = _interopRequireDefault(_oneutil);
 
@@ -1064,7 +1111,7 @@ function OnekitBehavior(object) {
 }
 
 /***/ }),
-/* 15 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1073,11 +1120,11 @@ function OnekitBehavior(object) {
 exports.__esModule = true;
 exports.default = OnekitComponent;
 
-var _oneutil = __webpack_require__(1);
+var _oneutil = __webpack_require__(2);
 
 var _oneutil2 = _interopRequireDefault(_oneutil);
 
-var _wxs_behavior = __webpack_require__(16);
+var _wxs_behavior = __webpack_require__(1);
 
 var _wxs_behavior2 = _interopRequireDefault(_wxs_behavior);
 
@@ -1264,52 +1311,7 @@ function OnekitComponent(object) {
 } /* eslint-disable camelcase */
 
 /***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-/* eslint-disable no-unused-vars */
-/* eslint-disable camelcase */
-exports.default = {
-    methods: {
-        selectComponent: function selectComponent(selector) {},
-        selectAllComponents: function selectAllComponents(selctor) {},
-        setStyle: function setStyle(styleDict) {
-            var onekit_styles = '';
-            for (var _iterator = Object.keys(styleDict), _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-                var _ref;
-
-                if (_isArray) {
-                    if (_i >= _iterator.length) break;
-                    _ref = _iterator[_i++];
-                } else {
-                    _i = _iterator.next();
-                    if (_i.done) break;
-                    _ref = _i.value;
-                }
-
-                var cssName = _ref;
-
-                onekit_styles += cssName + ':' + styleDict[cssName] + ';';
-            }
-            this.setData({ onekit_styles: onekit_styles });
-        },
-        addClass: function addClass(className) {},
-        removeClass: function removeClass(className) {},
-        hasClass: function hasClass(className) {},
-        getDataset: function getDataset() {},
-        callMethod: function callMethod(funcName, args) {},
-        requestAnimationFrame: function requestAnimationFrame(callback) {},
-        getState: function getState() {},
-        getComputedStyle: function getComputedStyle(cssNames) {}
-    }
-};
-
-/***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

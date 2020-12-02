@@ -1,11 +1,23 @@
-/* eslint-disable max-len */
-/* eslint-disable no-console */
-// // import onekit from 'oneutil'
+// import {STRING} from 'oneutil'
 // import CanvasContext from './api/CanvasContext'
 // import VideoContext from './api/VideoContext'
 // import LivePlayerContext from './api/LivePlayerContext'
 // // import Context from "./api/Context.js"
-// export default class tt {
+export default class tt {
+  static canIuse() { return true }
+
+  static base64ToArrayBuffer(base64) {
+    base64 = base64.replace(/\s/g, '+')
+    const commonContent = Buffer.from(base64, 'base64')
+    return commonContent
+  }
+
+  static arrayBufferToBase64(arrybufferr) {
+    const base64Content = Buffer.from(arrybufferr).toString('base64')
+    return base64Content
+    // return STRING.arrayBufferToBase64(arrybufferr)
+  }
+}
 //   // ///////////////// animation //////////////////////////
 //   static createAnimation(object) { return swan.createAnimation(object) }
 
@@ -159,9 +171,13 @@
 
 //   static onBLEConnectionStateChange(object) { return swan.onBLEConnectionStateChange(object) }
 
-//   static onBLECharacteristicValueChange(object) { return swan.onBLECharacteristicValueChange(object) }
+//   static onBLECharacteristicValueChange(object) {
+//   return swan.onBLECharacteristicValueChange(object)
+// }
 
-//   static notifyBLECharacteristicValueChange(object) { return swan.notifyBLECharacteristicValueChange(object) }
+//   static notifyBLECharacteristicValueChange(object) {
+//   return swan.notifyBLECharacteristicValueChange(object)
+// }
 
 //   static getBLEDeviceServices(object) { return swan.getBLEDeviceServices(object) }
 
@@ -172,17 +188,25 @@
 //   static closeBLEConnection(object) { return swan.closeBLEConnection(object) }
 
 //   //
-//   static stopBluetoothDevicesDiscovery(object) { /* return swan.stopBluetoothDevicesDiscovery(object); */ }
+//   static stopBluetoothDevicesDiscovery(object) { /*
+// return swan.stopBluetoothDevicesDiscovery(object);
+//  */ }
 
-//   static startBluetoothDevicesDiscovery(object) { return swan.startBluetoothDevicesDiscovery(object) }
+//   static startBluetoothDevicesDiscovery(object) {
+//   return swan.startBluetoothDevicesDiscovery(object)
+// }
 
 //   static openBluetoothAdapter(object) { /* return swan.openBluetoothAdapter(object); */ }
 
 //   static onBluetoothDeviceFound(object) { return swan.onBluetoothDeviceFound(object) }
 
-//   static onBluetoothAdapterStateChange(object) { return swan.onBluetoothAdapterStateChange(object) }
+//   static onBluetoothAdapterStateChange(object) {
+//   return swan.onBluetoothAdapterStateChange(object)
+// }
 
-//   static getConnectedBluetoothDevices(object) { return swan.getConnectedBluetoothDevices(object) }
+//   static getConnectedBluetoothDevices(object) {
+//   return swan.getConnectedBluetoothDevices(object)
+// }
 
 //   static getBluetoothDevices(object) { return swan.getBluetoothDevices(object) }
 
@@ -284,7 +308,9 @@
 
 //   static playBackgroundAudio(object) { return swan.playBackgroundAudio(object) }
 
-//   static getBackgroundAudioPlayerState(object) { return swan.getBackgroundAudioPlayerState(object) }
+//   static getBackgroundAudioPlayerState(object) {
+//   return swan.getBackgroundAudioPlayerState(object)
+// }
 
 //   static getBackgroundAudioManager(object) { return swan.getBackgroundAudioManager(object) }
 
@@ -318,7 +344,9 @@
 
 //   static onLocalServiceResolveFail(object) { return swan.onLocalServiceResolveFail(object) }
 
-//   static offLocalServiceDiscoveryStop(object) { return swan.offLocalServiceDiscoveryStop(object) }
+//   static offLocalServiceDiscoveryStop(object) {
+//   return swan.offLocalServiceDiscoveryStop(object)
+//  }
 
 //   static onLocalServiceDiscoveryStop(object) { return swan.onLocalServiceDiscoveryStop(object) }
 
@@ -345,20 +373,27 @@
 
 //   static onLocalServiceFound(callback) { return swan.onLocalServiceFound(callback) }
 
-//   static onLocalServiceDiscoveryStop(callback) { return swan.onLocalServiceDiscoveryStop(callback) }
+//   static onLocalServiceDiscoveryStop(callback) {
+//   return swan.onLocalServiceDiscoveryStop(callback)
+// }
 
-//   static offLocalServiceResolveFail(callback) { return swan.offLocalServiceResolveFail(callback) }
+//   static offLocalServiceResolveFail(callback) {
+//   return swan.offLocalServiceResolveFail(callback)
+// }
 
 //   static offLocalServiceLost(callback) { return swan.offLocalServiceLost(callback) }
 
 //   static offLocalServiceFound(callback) { return swan.offLocalServiceFound(callback) }
 
-//   static offLocalServiceDiscoveryStop(callback) { return swan.offLocalServiceDiscoveryStop(callback) }
+//   static offLocalServiceDiscoveryStop(callback) {
+//   return swan.offLocalServiceDiscoveryStop(callback)
+// }
 
 //   // /////// Open Interface //////////
 //   static _checkSession() {
 //     const now = new Date().getTime()
-//     return getApp().onekitwx._jscode && getApp().onekitwx._login && now <= getApp().onekitwx._login + 1000 * 60 * 60 * 24 * 3
+//     return getApp().onekitwx._jscode &&
+// getApp().onekitwx._login && now <= getApp().onekitwx._login + 1000 * 60 * 60 * 24 * 3
 //   }
 
 //   static checkSession(object) {
@@ -572,9 +607,13 @@
 
 //   static startSoterAuthentication(object) { return swan.startSoterAuthentication(object) }
 
-//   static checkIsSupportSoterAuthentication(object) { return swan.checkIsSupportSoterAuthentication(object) }
+//   static checkIsSupportSoterAuthentication(object) {
+//   return swan.checkIsSupportSoterAuthentication(object)
+// }
 
-//   static checkIsSoterEnrolledInDevice(object) { return swan.checkIsSoterEnrolledInDevice(object) }
+//   static checkIsSoterEnrolledInDevice(object) {
+//   return swan.checkIsSoterEnrolledInDevice(object)
+// }
 
 //   static getWeRunData(object) { return swan.getWeRunData(object) }
 
@@ -701,7 +740,9 @@
 
 //   static nextTick(object) { return swan.nextTick(object) }
 
-//   static getMenuButtonBoundingClientRect(object) { return swan.getMenuButtonBoundingClientRect(object) }
+//   static getMenuButtonBoundingClientRect(object) {
+//   return swan.getMenuButtonBoundingClientRect(object)
+// }
 
 //   static offWindowResize(object) { return swan.offWindowResize(object) }
 
@@ -722,7 +763,13 @@
 //   static createARCameraContext(object) { throw new Error('createARCameraContext�ݲ�֧��!!') }
 // }
 // swan.ai = {}
-// for (const api of ['ocrIdCard', 'ocrBankCard', 'ocrDrivingLicense', 'ocrVehicleLicense', 'textReview', 'textToAudio', 'imageAudit', 'advancedGeneralIdentify', 'objectDetectIdentify', 'carClassify', 'dishClassify', 'logoClassify', 'animalClassify', 'plantClassify', 'getVoiceRecognizer', 'faceDetect', 'faceMatch', 'faceSearch', 'facePersonVerify', 'facePersonIdmatch', 'faceLivenessSessioncode', 'nlpLexerCustom']) {
+// for (const api of
+// ['ocrIdCard', 'ocrBankCard', 'ocrDrivingLicense', 'ocrVehicleLicense',
+// 'textReview', 'textToAudio', 'imageAudit', 'advancedGeneralIdentify',
+// 'objectDetectIdentify', 'carClassify', 'dishClassify', 'logoClassify',
+// 'animalClassify', 'plantClassify', 'getVoiceRecognizer', 'faceDetect',
+// 'faceMatch', 'faceSearch', 'facePersonVerify', 'facePersonIdmatch',
+// 'faceLivenessSessioncode', 'nlpLexerCustom']) {
 //   ai_init(api)
 // }
 // function ai_init(api) {

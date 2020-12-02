@@ -1,0 +1,11 @@
+<view
+class="onekit-view {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+hover-class="{{hover-class}}"
+hover-stop-propagation="{{hover-stop-propagation}}"
+hover-start-time="{{hover-start-time}}"
+hover-stay-time="{{hover-stay-time}}"
+>
+ <slot></slot>
+</view>

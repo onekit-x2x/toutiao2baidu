@@ -12,7 +12,5 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
-toutiao_baidu/client/.swan/editor.json
-toutiao_baidu/client/.swan/editor.json
-toutiao_baidu/client/.swan/editor.json
-toutiao_baidu/client/.swan/editor.json
+.DS_Store
+dist

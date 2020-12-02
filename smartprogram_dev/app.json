@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "li/li",
+        "wang/wang"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "智能小程序",
+        "backgroundTextStyle": "light"
+    }
+}

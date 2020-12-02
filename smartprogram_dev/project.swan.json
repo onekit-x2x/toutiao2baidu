@@ -1,0 +1,13 @@
+{
+    "host": "baiduboxapp",
+    "projectname": "smartprogram_dev",
+    "setting": {
+        "urlCheck": true
+    },
+    "swan": {
+        "baiduboxapp": {
+            "extensionJsVersion": "1.19.4",
+            "swanJsVersion": "3.230.33"
+        }
+    }
+}

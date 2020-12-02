@@ -22,7 +22,7 @@ Component({
       type: Number,
       value: 1
     },
-    disabled: {
+    value: {
       type: Boolean,
       value: false
     },
@@ -51,8 +51,8 @@ Component({
       value: '#ffffff'
     },
     showValue: {
-      type: Number,
-      value: 0
+      type: Boolean,
+      value: false
     },
   },
 

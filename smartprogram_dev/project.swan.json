@@ -1,4 +1,9 @@
 {
+    "compilation-args": {
+        "common": {
+            "ignoreTransJs": false
+        }
+    },
     "host": "baiduboxapp",
     "projectname": "smartprogram_dev",
     "setting": {
@@ -6,8 +11,8 @@
     },
     "swan": {
         "baiduboxapp": {
-            "swanJsVersion": "3.230.33",
-            "extensionJsVersion": "1.19.4"
+            "extensionJsVersion": "1.19.4",
+            "swanJsVersion": "3.230.33"
         }
     }
 }

@@ -93,10 +93,58 @@ module.exports =
 
 
 exports.__esModule = true;
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+exports.default = {
+    methods: {
+        selectComponent: function selectComponent(selector) {},
+        selectAllComponents: function selectAllComponents(selctor) {},
+        setStyle: function setStyle(styleDict) {
+            var onekit_styles = '';
+            for (var _iterator = Object.keys(styleDict), _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+                var _ref;
+
+                if (_isArray) {
+                    if (_i >= _iterator.length) break;
+                    _ref = _iterator[_i++];
+                } else {
+                    _i = _iterator.next();
+                    if (_i.done) break;
+                    _ref = _i.value;
+                }
+
+                var cssName = _ref;
+
+                onekit_styles += cssName + ':' + styleDict[cssName] + ';';
+            }
+            this.setData({ onekit_styles: onekit_styles });
+        },
+        addClass: function addClass(className) {},
+        removeClass: function removeClass(className) {},
+        hasClass: function hasClass(className) {},
+        getDataset: function getDataset() {},
+        callMethod: function callMethod(funcName, args) {},
+        requestAnimationFrame: function requestAnimationFrame(callback) {},
+        getState: function getState() {},
+        getComputedStyle: function getComputedStyle(cssNames) {}
+    }
+};
+
+/***/ }),
+/* 1 */,
+/* 2 */,
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _oneutil = __webpack_require__(4);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// import {STRING} from 'oneutil'
 // import CanvasContext from './api/CanvasContext'
 // import VideoContext from './api/VideoContext'
 // import LivePlayerContext from './api/LivePlayerContext'
@@ -111,15 +159,11 @@ var tt = function () {
   };
 
   tt.base64ToArrayBuffer = function base64ToArrayBuffer(base64) {
-    base64 = base64.replace(/\s/g, '+');
-    var commonContent = Buffer.from(base64, 'base64');
-    return commonContent;
+    return _oneutil.STRING.base64ToArrayBuffer(base64);
   };
 
   tt.arrayBufferToBase64 = function arrayBufferToBase64(arrybufferr) {
-    var base64Content = Buffer.from(arrybufferr).toString('base64');
-    return base64Content;
-    // return STRING.arrayBufferToBase64(arrybufferr)
+    return _oneutil.STRING.arrayBufferToBase64(arrybufferr);
   };
 
   return tt;
@@ -886,59 +930,12 @@ var tt = function () {
 exports.default = tt;
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-/* eslint-disable no-unused-vars */
-/* eslint-disable camelcase */
-exports.default = {
-    methods: {
-        selectComponent: function selectComponent(selector) {},
-        selectAllComponents: function selectAllComponents(selctor) {},
-        setStyle: function setStyle(styleDict) {
-            var onekit_styles = '';
-            for (var _iterator = Object.keys(styleDict), _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-                var _ref;
-
-                if (_isArray) {
-                    if (_i >= _iterator.length) break;
-                    _ref = _iterator[_i++];
-                } else {
-                    _i = _iterator.next();
-                    if (_i.done) break;
-                    _ref = _i.value;
-                }
-
-                var cssName = _ref;
-
-                onekit_styles += cssName + ':' + styleDict[cssName] + ';';
-            }
-            this.setData({ onekit_styles: onekit_styles });
-        },
-        addClass: function addClass(className) {},
-        removeClass: function removeClass(className) {},
-        hasClass: function hasClass(className) {},
-        getDataset: function getDataset() {},
-        callMethod: function callMethod(funcName, args) {},
-        requestAnimationFrame: function requestAnimationFrame(callback) {},
-        getState: function getState() {},
-        getComputedStyle: function getComputedStyle(cssNames) {}
-    }
-};
-
-/***/ }),
-/* 2 */
+/* 4 */
 /***/ (function(module, exports) {
 
 module.exports = require("oneutil");
 
 /***/ }),
-/* 3 */,
-/* 4 */,
 /* 5 */,
 /* 6 */,
 /* 7 */,
@@ -965,7 +962,7 @@ var OnekitComponent_1 = __webpack_require__(18);
 exports.OnekitComponent = OnekitComponent_1.default;
 var OnekitPage_1 = __webpack_require__(19);
 exports.OnekitPage = OnekitPage_1.default;
-var tt_1 = __webpack_require__(0);
+var tt_1 = __webpack_require__(3);
 exports.tt = tt_1.default;
 
 /***/ }),
@@ -994,11 +991,11 @@ function OnekitApp(tt_object) {
 exports.__esModule = true;
 exports.default = OnekitBehavior;
 
-var _oneutil = __webpack_require__(2);
+var _oneutil = __webpack_require__(4);
 
 var _oneutil2 = _interopRequireDefault(_oneutil);
 
-var _tt = __webpack_require__(0);
+var _tt = __webpack_require__(3);
 
 var _tt2 = _interopRequireDefault(_tt);
 
@@ -1120,15 +1117,15 @@ function OnekitBehavior(object) {
 exports.__esModule = true;
 exports.default = OnekitComponent;
 
-var _oneutil = __webpack_require__(2);
+var _oneutil = __webpack_require__(4);
 
 var _oneutil2 = _interopRequireDefault(_oneutil);
 
-var _wxs_behavior = __webpack_require__(1);
+var _wxs_behavior = __webpack_require__(0);
 
 var _wxs_behavior2 = _interopRequireDefault(_wxs_behavior);
 
-var _tt = __webpack_require__(0);
+var _tt = __webpack_require__(3);
 
 var _tt2 = _interopRequireDefault(_tt);
 

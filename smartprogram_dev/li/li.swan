@@ -1,3 +1,23 @@
-<view class="container">
-    li/li
-</view>
+<!-- <slider> -->
+<onekit-view class="container">
+  <onekit-view class="body body-space">
+    <onekit-view class="page-section page-section-gap">
+      <onekit-view class="page-section-title">设置step</onekit-view>
+      <onekit-view class="body-onekit-view">
+        <onekit-slider value="60" bindchange="slider2change" step="5" disabled="{{false}}" background-color="#e9e9e9" active-color="#1aad19" block-size="28" block-color="#fff" show-value="{{false}}" bindchanging="bindchanging" />
+      </onekit-view>
+    </onekit-view>
+    <onekit-view class="page-section page-section-gap">
+      <onekit-view class="page-section-title">显示当前value</onekit-view>
+      <onekit-view class="body-onekit-view">
+        <onekit-slider value="50" bindchange="slider3change" show-value step="1" disabled="{{false}}" background-color="#e9e9e9" active-color="#1aad19" block-size="28" block-color="#fff" />
+      </onekit-view>
+    </onekit-view>
+    <onekit-view class="page-section page-section-gap">
+      <onekit-view class="page-section-title">设置最小/最大值</onekit-view>
+      <onekit-view class="body-onekit-view">
+        <onekit-slider value="100" bindchange="slider4change" min="50" max="200" show-value step="1" disabled="{{false}}" background-color="#e9e9e9" active-color="#1aad19" block-size="28" block-color="#fff" />
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

@@ -15,7 +15,14 @@ export default class tt {
   static arrayBufferToBase64(arrybufferr) {
     const base64Content = Buffer.from(arrybufferr).toString('base64')
     return base64Content
-    // return STRING.arrayBufferToBase64(arrybufferr)
+  }
+
+  static getLaunchOptionsSync() {
+    // baidu is not surpport
+  }
+
+  static exitMiniProgram() {
+    // baidu is not support
   }
 }
 //   // ///////////////// animation //////////////////////////

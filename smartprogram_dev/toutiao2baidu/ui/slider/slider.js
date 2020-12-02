@@ -82,84 +82,38 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 11:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Component({
-  options: {
-    addGlobalClass: true
-  },
   properties: {
-    onekitClass: {
-      type: String,
-      value: ''
-    },
-    onekitStyle: {
-      type: String,
-      value: ''
-    },
-    onekitId: {
-      type: String,
-      value: ''
-    },
-    scrollX: {
-      type: Boolean,
-      value: false
-    },
-    scrollY: {
-      type: Boolean,
-      value: false
-    },
-    upperThreshold: {
-      type: Number || String,
-      value: '50'
-    },
-    lowerThreshold: {
-      type: Number || String,
-      value: '50'
-    },
-    scrollTop: {
-      type: Number || String,
-      value: ''
-    },
-    scrollLeft: {
-      type: Number || String,
-      value: ''
-    },
-    scrollIntoView: {
-      type: String,
-      value: ''
-    },
-    scrollWithAnimation: {
-      type: Boolean,
-      value: false
-    },
-    enableBackToTop: {
-      type: Boolean,
-      value: false
+    propName: { // 属性名
+      type: String, // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
+      value: 'val' // 属性初始值（必填）
+
     }
   },
-  data: {},
-  lifetimes: {
-    attached: function attached() {}
-  },
+
+  data: {}, // 私有数据，可用于模版渲染
+
+  // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+  attached: function attached() {},
+  detached: function detached() {},
+
+
   methods: {
-    on_toupper: function on_toupper(e) {
-      this.triggerEvent('scrolltoupper', { e: e });
-    },
-    on_tolower: function on_tolower(e) {
-      this.triggerEvent('scrolltolower', { e: e });
-    },
-    on_scroll: function on_scroll(e) {
-      this.triggerEvent('scroll', { e: e });
+    onTap: function onTap() {
+      this.setData({
+        // 更新属性和数据的方法与更新页面数据的方法类似
+      });
     }
   }
 });

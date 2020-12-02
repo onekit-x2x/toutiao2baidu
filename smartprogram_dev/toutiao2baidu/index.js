@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -839,14 +839,7 @@ module.exports = require("oneutil");
 /* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -854,19 +847,19 @@ module.exports = require("oneutil");
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.tt = exports.OnekitPage = exports.OnekitComponent = exports.OnekitBehavior = exports.OnekitApp = void 0;
-var OnekitApp_1 = __webpack_require__(20);
+var OnekitApp_1 = __webpack_require__(13);
 exports.OnekitApp = OnekitApp_1.default;
-var OnekitBehavior_1 = __webpack_require__(21);
+var OnekitBehavior_1 = __webpack_require__(14);
 exports.OnekitBehavior = OnekitBehavior_1.default;
-var OnekitComponent_1 = __webpack_require__(22);
+var OnekitComponent_1 = __webpack_require__(15);
 exports.OnekitComponent = OnekitComponent_1.default;
-var OnekitPage_1 = __webpack_require__(24);
+var OnekitPage_1 = __webpack_require__(17);
 exports.OnekitPage = OnekitPage_1.default;
 var tt_1 = __webpack_require__(0);
 exports.tt = tt_1.default;
 
 /***/ }),
-/* 20 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -882,7 +875,7 @@ function OnekitApp(tt_object) {
 }
 
 /***/ }),
-/* 21 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1008,7 +1001,7 @@ function OnekitBehavior(object) {
 }
 
 /***/ }),
-/* 22 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1021,7 +1014,7 @@ var _oneutil = __webpack_require__(1);
 
 var _oneutil2 = _interopRequireDefault(_oneutil);
 
-var _wxs_behavior = __webpack_require__(23);
+var _wxs_behavior = __webpack_require__(16);
 
 var _wxs_behavior2 = _interopRequireDefault(_wxs_behavior);
 
@@ -1208,7 +1201,7 @@ function OnekitComponent(object) {
 } /* eslint-disable camelcase */
 
 /***/ }),
-/* 23 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1253,7 +1246,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 24 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

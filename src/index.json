@@ -8,7 +8,6 @@
     "swiper":"./ui//swiper/swiper",
     "text":"./ui/text/text",
     "video":"./ui/video/video",
-    "view":"./ui/view/view",
     "web-view":"./ui/web-view/web-view"
   }
 }

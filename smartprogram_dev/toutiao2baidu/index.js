@@ -163,7 +163,16 @@ var tt = function () {
   };
 
   tt.arrayBufferToBase64 = function arrayBufferToBase64(arrybufferr) {
-    return _oneutil.STRING.arrayBufferToBase64(arrybufferr);
+    var base64Content = Buffer.from(arrybufferr).toString('base64');
+    return base64Content;
+  };
+
+  tt.getLaunchOptionsSync = function getLaunchOptionsSync() {
+    // baidu is not surpport
+  };
+
+  tt.exitMiniProgram = function exitMiniProgram() {
+    // baidu is not support
   };
 
   return tt;

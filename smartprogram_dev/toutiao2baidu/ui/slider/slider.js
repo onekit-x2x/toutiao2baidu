@@ -266,9 +266,13 @@ Component({
       type: Number,
       value: 1
     },
-    value: {
+    disabled: {
       type: Boolean,
       value: false
+    },
+    value: {
+      type: Number,
+      value: 0
     },
     color: {
       type: String,
@@ -284,7 +288,7 @@ Component({
     },
     backgroundColor: {
       type: String,
-      value: '#1aad19'
+      value: '#e9e9e9'
     },
     blockSize: {
       type: Number,

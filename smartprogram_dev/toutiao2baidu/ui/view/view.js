@@ -178,34 +178,22 @@ Component({
   properties: {
     hoverClass: {
       type: String,
-      value: ''
-    },
-    hoverStarTime: {
-      type: Number,
-      value: ''
-    },
-    hoverStayTime: {
-      type: Number,
-      value: ''
+      value: 'none'
     },
     hoverStopPropagation: {
       type: Boolean,
       value: false
     },
-    disableScroll: {
-      type: Boolean,
-      value: false
+    hoverStarTime: {
+      type: Number,
+      value: 50
     },
-    hidden: {
-      type: Boolean,
-      value: false
+    hoverStayTime: {
+      type: Number,
+      value: 400
     }
   },
-  methods: {
-    view_Tap: function view_Tap(e) {
-      this.triggerEvent('Tap', e);
-    }
-  }
+  methods: {}
 }); /* eslint-disable no-console */
 /* eslint-disable camelcase */
 

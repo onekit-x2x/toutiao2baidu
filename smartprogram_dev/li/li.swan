@@ -50,7 +50,7 @@
 </view> -->
 
 <!-- <swiper> -->
-<view class="container">
+<!-- <view class="container">
   <view class="body body-space">
     <view class="page-section">
       <onekit-swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="rgba(0, 0, 0, 1)" current="{{0}}" current-item-id="" previous-margin="" next-margin="" display-multiple-items="{{1}}"  autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" vertical="{{vertical}}" duration="{{duration}}" bindanimationfinish="animationFinish" bindtransition="transition" >
@@ -102,4 +102,39 @@
       <slider bindchange="intervalChange" value="{{interval}}" min="2000" max="10000" />
     </view>
   </view>
+</view> -->
+
+<!-- <text> -->
+<!-- <view class="container">
+  <view class="body body-space">
+    <view class="page-section page-section-spacing">
+      <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+        <onekit-text selectable="{{false}}" space="{{false}}" decode="{{false}}">{{text}}</onekit-text>
+      </view>
+      <button disabled="{{!canAdd}}" bindtap="add">添加一行文字</button>
+      <button disabled="{{!canRemove}}" bindtap="remove">删除一行文字</button>
+    </view>
+  </view>
+</view> -->
+
+<view>
+  <onekit-text decode value="&nbsp;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&lt;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&gt;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&amp;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="5 &apos;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&ensp;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&emsp;"></onekit-text>
 </view>

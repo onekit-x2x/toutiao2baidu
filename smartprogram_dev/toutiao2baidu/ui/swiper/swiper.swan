@@ -20,5 +20,5 @@ display-multiple-items="{{displayMultipleItems}}"
 bindchange="swiper_Change"
 bindanimationfinish="swiper_AnimationEnd"
 >
-<slot></slot>
+swiper暂不翻译
 </swiper>

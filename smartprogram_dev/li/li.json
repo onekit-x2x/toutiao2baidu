@@ -1,7 +1,6 @@
 {
     "usingComponents":{
         "onekit-slider":"../toutiao2baidu/ui/slider/slider",
-        "onekit-swiper":"../toutiao2baidu/ui/swiper/swiper",
         "onekit-text":"../toutiao2baidu/ui/text/text"
     }
 }

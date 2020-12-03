@@ -2,8 +2,9 @@
 class="onekit-text {{onekitClass}}"
 style="{{onekitStyle}}"
 id="{{onekitId}}"
-selectable="{{selectable}}"
+
 space="{{space}}"
+selectable="{{selectable}}"
 >
-<slot></slot>
+{{value}}
 </text>

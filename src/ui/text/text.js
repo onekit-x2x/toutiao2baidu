@@ -24,6 +24,7 @@ Component({
     },
     value: {
       type: String,
+      value: '',
       observer(newVal) {
         const value = this.properties.decode ? this._decode(newVal) : newVal
         this.setData({value})

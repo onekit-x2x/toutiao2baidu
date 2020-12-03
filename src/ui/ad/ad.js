@@ -6,23 +6,54 @@ import weixin_behavior from '../../behavior/weixin_behavior'
 
 Component({
   behaviors: [onekit_behavior, wxs_behavior, weixin_behavior],
-
   properties: {
-    'ad-type': {
-
+    unitId: {
       type: String,
-      value: 'banner',
+      value: null,
     },
+    adIntervals: {
+      type: Number || String,
+      value: null
+    },
+    fixed: {
+      type: Boolean,
+      value: null,
+    },
+    type: {
+      type: String,
+      value: 'banner'
+    },
+    scale: {
+      type: Number,
+      value: 100
+    }
   },
-
-  data: {}, // 私有数据，可用于模版渲染
-
-  // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
-  attached() {},
+  data: {},
+  attached() {
+    //
+    let fixed
+    let static
+    if (this.properties.fixed === true) {
+      this.properties.fixed = fixed
+    } else {
+      this.properties.fixed = static
+    }
+    this.setData({
+      fixed
+    })
+  },
 
   detached() {},
 
   methods: {
-
+    ad_load(e) {
+      this.triggerEvent('load', e)
+    },
+    ad_error(e) {
+      this.triggerEvent('error', e)
+    },
+    ad_close(e) {
+      this.triggerEvent('close', e)
+    },
   }
 })

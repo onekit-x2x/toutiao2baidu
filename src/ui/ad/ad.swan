@@ -1,7 +1,13 @@
 <ad 
 class="onekit-ad {{onekitClass}}"
-style="{{onekitStyle}}"
+style="postion:{{fixed}};{{onekitStyle}}"
 id="{{onekitId}}"
-unit-id="{{unit-id}}"
-type="{{ad-type}}"
+
+apid="{{unitId}}"
+type="{{type}}"
+updatetime="{{adIntervals}}"
+
+binderror="ad_error"
+bindload="ad_load"
+bindclose="ad_close"
 ></ad>

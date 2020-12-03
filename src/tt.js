@@ -2,6 +2,8 @@
 // import CanvasContext from './api/CanvasContext'
 // import VideoContext from './api/VideoContext'
 // import LivePlayerContext from './api/LivePlayerContext'
+
+
 // // import Context from "./api/Context.js"
 export default class tt {
   static canIuse() { return true }
@@ -23,6 +25,42 @@ export default class tt {
 
   static exitMiniProgram() {
     // baidu is not support
+  }
+
+  static canIPutStuffOverComponent() {
+    return true
+  }
+
+  static getUpdateManager() {
+    return swan.getUpdateManager()
+  }
+
+  static updateManager() {
+    return swan.updateManager()
+  }
+
+  static onAppShow(callback) {
+    return swan.onAppShow(callback)
+  }
+
+  static offAppshow(callback) {
+    return swan.offAppshow(callback)
+  }
+
+  static onAppHide(callbak) {
+    return swan.onAppHide(callbak)
+  }
+
+  static offAppHide(callback) {
+    return swan.offAppHide(callback)
+  }
+
+  static onError(callback) {
+    return swan.onError(callback)
+  }
+
+  static offError(callback) {
+    return swan.offError(callback)
   }
 }
 //   // ///////////////// animation //////////////////////////

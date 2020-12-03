@@ -307,11 +307,11 @@ Component({
   methods: {
     slider_Change: function slider_Change(e) {
       console.log('slider_Change', e);
-      this.triggerEvent('Change', e.details);
+      this.triggerEvent('change', e.details);
     },
     slider_Changing: function slider_Changing(e) {
       console.log('slider_Changing', e);
-      this.triggerEvent('Changing', e.details);
+      this.triggerEvent('changing', e.details);
     }
   }
 }); /* eslint-disable no-console */

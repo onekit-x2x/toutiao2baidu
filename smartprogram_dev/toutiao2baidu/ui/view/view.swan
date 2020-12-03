@@ -8,5 +8,5 @@
     hover-start-time="{{hoverStartTime}}"
     hover-stay-time="{{hoverStayTime}}"
 >
- <slot></slot>
+    view暂不翻译，百度小程序没有去壳
 </view>

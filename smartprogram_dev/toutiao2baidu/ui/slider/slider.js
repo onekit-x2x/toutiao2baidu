@@ -82,12 +82,11 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
-/* 1 */
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -132,95 +131,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _onekit_behavior = __webpack_require__(8);
-
-var _onekit_behavior2 = _interopRequireDefault(_onekit_behavior);
-
-var _wxs_behavior = __webpack_require__(1);
-
-var _wxs_behavior2 = _interopRequireDefault(_wxs_behavior);
-
-var _weixin_behavior = __webpack_require__(9);
-
-var _weixin_behavior2 = _interopRequireDefault(_weixin_behavior);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-Component({
-  behaviors: [_onekit_behavior2.default, _wxs_behavior2.default, _weixin_behavior2.default],
-  options: {
-    addGlobalClass: true
-  },
-  properties: {
-    min: {
-      type: Number,
-      value: 0
-    },
-    max: {
-      type: Number,
-      value: 100
-    },
-    step: {
-      type: Number,
-      value: 1
-    },
-    disabled: {
-      type: Boolean,
-      value: false
-    },
-    color: {
-      type: String,
-      value: '#e9e9e9'
-    },
-    selectedColor: {
-      type: String,
-      value: '#1aad19'
-    },
-    activeColor: {
-      type: String,
-      value: '#1aad19'
-    },
-    backgroundColor: {
-      type: String,
-      value: '#1aad19'
-    },
-    blockSize: {
-      type: Number,
-      value: 28
-    },
-    blockColor: {
-      type: String,
-      value: '#ffffff'
-    },
-    showValue: {
-      type: Number,
-      value: 0
-    }
-  },
-
-  methods: {
-    onTap: function onTap() {
-      this.setData({
-        // 更新属性和数据的方法与更新页面数据的方法类似
-      });
-    }
-  }
-}); /* eslint-disable no-console */
-/* eslint-disable camelcase */
-
-/***/ }),
-/* 8 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -236,7 +147,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 9 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -309,6 +220,102 @@ module.exports = {
     }
   }
 };
+
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _onekit_behavior = __webpack_require__(1);
+
+var _onekit_behavior2 = _interopRequireDefault(_onekit_behavior);
+
+var _wxs_behavior = __webpack_require__(0);
+
+var _wxs_behavior2 = _interopRequireDefault(_wxs_behavior);
+
+var _weixin_behavior = __webpack_require__(2);
+
+var _weixin_behavior2 = _interopRequireDefault(_weixin_behavior);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+Component({
+  behaviors: [_onekit_behavior2.default, _wxs_behavior2.default, _weixin_behavior2.default],
+  options: {
+    addGlobalClass: true
+  },
+  properties: {
+    min: {
+      type: Number,
+      value: 0
+    },
+    max: {
+      type: Number,
+      value: 100
+    },
+    step: {
+      type: Number,
+      value: 1
+    },
+    disabled: {
+      type: Boolean,
+      value: false
+    },
+    value: {
+      type: Number,
+      value: 0
+    },
+    color: {
+      type: String,
+      value: '#e9e9e9'
+    },
+    selectedColor: {
+      type: String,
+      value: '#1aad19'
+    },
+    activeColor: {
+      type: String,
+      value: '#1aad19'
+    },
+    backgroundColor: {
+      type: String,
+      value: '#e9e9e9'
+    },
+    blockSize: {
+      type: Number,
+      value: 28
+    },
+    blockColor: {
+      type: String,
+      value: '#ffffff'
+    },
+    showValue: {
+      type: Boolean,
+      value: false
+    }
+  },
+
+  methods: {
+    slider_Change: function slider_Change(e) {
+      console.log('slider_Change', e);
+      this.triggerEvent('change', e.details);
+    },
+    slider_Changing: function slider_Changing(e) {
+      console.log('slider_Changing', e);
+      this.triggerEvent('changing', e.details);
+    }
+  }
+}); /* eslint-disable no-console */
+/* eslint-disable camelcase */
 
 /***/ })
 /******/ ]);

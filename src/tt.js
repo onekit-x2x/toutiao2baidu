@@ -1,4 +1,4 @@
-// import {STRING} from 'oneutil'
+import {STRING} from 'oneutil'
 // import CanvasContext from './api/CanvasContext'
 // import VideoContext from './api/VideoContext'
 // import LivePlayerContext from './api/LivePlayerContext'
@@ -9,9 +9,7 @@ export default class tt {
   static canIuse() { return true }
 
   static base64ToArrayBuffer(base64) {
-    base64 = base64.replace(/\s/g, '+')
-    const commonContent = Buffer.from(base64, 'base64')
-    return commonContent
+    return STRING.base64ToArrayBuffer(base64)
   }
 
   static arrayBufferToBase64(arrybufferr) {

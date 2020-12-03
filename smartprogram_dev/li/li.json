@@ -1,4 +1,7 @@
 {
-    "onekit-view":"../toutiao2baidu/ui/view",
-    "onekit-slider":"../toutiao2baidu/ui/slider"
+    "usingComponents":{
+        "onekit-slider":"../toutiao2baidu/ui/slider/slider",
+        "onekit-text":"../toutiao2baidu/ui/text/text",
+        "onekit-video":"../toutiao2baidu/ui/video/video"
+    }
 }

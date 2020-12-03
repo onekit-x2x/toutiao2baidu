@@ -12,7 +12,7 @@
     block-size="{{blockSize}}"
     block-color="{{blockColor}}"
     activeColor="{{activeColor || selectedColor}}"
-    show-value="{{showValue}}
+    show-value="{{showValue}}"
 
     bindchange="slider_Change"
     bindchanging="slider_Changing"

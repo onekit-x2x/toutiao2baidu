@@ -1,23 +1,172 @@
 <!-- <slider> -->
-<onekit-view class="container">
-  <onekit-view class="body body-space">
-    <onekit-view class="page-section page-section-gap">
-      <onekit-view class="page-section-title">设置step</onekit-view>
-      <onekit-view class="body-onekit-view">
+<!-- <view class="container">
+  <view class="body body-space">
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">设置step</view>
+      <view class="body-view">
         <onekit-slider value="60" bindchange="slider2change" step="5" disabled="{{false}}" background-color="#e9e9e9" active-color="#1aad19" block-size="28" block-color="#fff" show-value="{{false}}" bindchanging="bindchanging" />
-      </onekit-view>
-    </onekit-view>
-    <onekit-view class="page-section page-section-gap">
-      <onekit-view class="page-section-title">显示当前value</onekit-view>
-      <onekit-view class="body-onekit-view">
+      </view>
+    </view>
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">显示当前value</view>
+      <view class="body-view">
         <onekit-slider value="50" bindchange="slider3change" show-value step="1" disabled="{{false}}" background-color="#e9e9e9" active-color="#1aad19" block-size="28" block-color="#fff" />
-      </onekit-view>
-    </onekit-view>
-    <onekit-view class="page-section page-section-gap">
-      <onekit-view class="page-section-title">设置最小/最大值</onekit-view>
-      <onekit-view class="body-onekit-view">
+      </view>
+    </view>
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">设置最小/最大值</view>
+      <view class="body-view">
         <onekit-slider value="100" bindchange="slider4change" min="50" max="200" show-value step="1" disabled="{{false}}" background-color="#e9e9e9" active-color="#1aad19" block-size="28" block-color="#fff" />
-      </onekit-view>
-    </onekit-view>
-  </onekit-view>
-</onekit-view>
+      </view>
+    </view>
+  </view>
+</view> -->
+
+<!-- <view> -->
+<!-- <view class="page-body">
+    <view class="page-section">
+        <view class="page-section-title">
+            <onekit-text>flex-direction: row\n横向布局</onekit-text>
+        </view>
+        <view class="flex-wrapper" style="flex-direction:row;">
+            <view hover-class="hover-item" class="flex-item" style="background-color: #73d13d">A
+            </view>
+            <view hover-class="hover-item" class="flex-item" style="background-color: #13c2c2">B
+            </view>
+            <view hover-class="hover-item" class="flex-item" style="background-color: #40a9ff">C
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">
+            <onekit-text>flex-direction: column\n纵向布局</onekit-text>
+        </view>
+        <view class="flex-wrapper" style="flex-direction:column;">
+            <view class="flex-item-v" style="background-color: #73d13d">A</view>
+            <view class="flex-item-v" style="background-color: #13c2c2">B</view>
+            <view class="flex-item-v" style="background-color: #40a9ff">C</view>
+        </view>
+    </view>
+</view> -->
+
+<!-- <swiper> -->
+<!-- <view class="container">
+  <view class="body body-space">
+    <view class="page-section">
+      <onekit-swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="rgba(0, 0, 0, 1)" current="{{0}}" current-item-id="" previous-margin="" next-margin="" display-multiple-items="{{1}}"  autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" vertical="{{vertical}}" duration="{{duration}}" bindanimationfinish="animationFinish" bindtransition="transition" >
+        <block tt:for="{{background}}">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </onekit-swiper>
+    </view>
+    <view class="page-section">
+      <view class="ttui-cells">
+        <view class="ttui-cell">
+          <view class="ttui-cell__bd">指示点</view>
+          <view class="ttui-cell__ft">
+            <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+          </view>
+        </view>
+        <view class="ttui-cell">
+          <view class="ttui-cell__bd">自动播放</view>
+          <view class="ttui-cell__ft">
+            <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
+          </view>
+        </view>
+        <view class="ttui-cell">
+          <view class="ttui-cell__bd">循环播放</view>
+          <view class="ttui-cell__ft">
+            <switch checked="{{circular}}" bindchange="changeCircular" />
+          </view>
+        </view>
+        <view class="ttui-cell">
+          <view class="ttui-cell__bd">滑块放置方向是否为竖直</view>
+          <view class="ttui-cell__ft">
+            <switch checked="{{vertical}}" bindchange="changeVertical" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="page-section page-section-space">
+      <view class="page-section-title">
+        <text>幻灯片切换时长(ms)</text>
+        <text class="info"> {{duration}}</text>
+      </view>
+      <slider bindchange="durationChange" value="{{duration}}" min="500" max="2000" />
+      <view class="page-section-title">
+        <text>自动播放间隔时长(ms)</text>
+        <text class="info"> {{interval}}</text>
+      </view>
+      <slider bindchange="intervalChange" value="{{interval}}" min="2000" max="10000" />
+    </view>
+  </view>
+</view> -->
+
+<!-- <text> -->
+<!-- <view class="container">
+  <view class="body body-space">
+    <view class="page-section page-section-spacing">
+      <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+        <onekit-text selectable="{{false}}" space="{{false}}" decode="{{false}}">{{text}}</onekit-text>
+      </view>
+      <button disabled="{{!canAdd}}" bindtap="add">添加一行文字</button>
+      <button disabled="{{!canRemove}}" bindtap="remove">删除一行文字</button>
+    </view>
+  </view>
+</view> -->
+<!-- <view>
+  <onekit-text decode value="&nbsp;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&lt;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&gt;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&amp;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="5 &apos;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&ensp;"></onekit-text>
+</view>
+<view>
+  <onekit-text decode value="&emsp;"></onekit-text>
+</view> -->
+
+<!-- <video> -->
+<view class="container">
+  <view class="body body-space-l">
+    <view class="page-section">
+      <onekit-video id="myVideo" src="https://sf1-ttcdn-tos.pstatp.com/obj/developer/sdk/1534422848153.mp4" binderror="videoErrorCallback" style="width: 100%;" show-fullscreen-btn="{{isFullscreen}}" show-play-btn="{{isShowPlayBtn}}" loop="{{isLoopPlay}}" controls="{{isShowControls}}" play-btn-position="{{playBtnPosition}}" object-fit="{{objectFitType}}" poster="{{poster}}" bindtimeupdate="bindtimeupdate" bindended="bindended" bindplay="bindplay" bindpause="bindpause" bindwaiting="bindwaiting" post-roll-unit-id="{{unitId}}" bindadstart="bindadstart" bindadstart="bindadstart" bindadclose="bindadclose" bindaderror="bindaderror" bindadload="bindadload"></onekit-video>
+    </view>
+    <view class="btn-set-row">
+      <button type="mini" size="mini" bindtap="switchFullScreen">
+        {{isFullscreen ? '隐藏全屏按钮' : '显示全屏按钮'}}
+      </button>
+      <button type="mini" size="mini" bindtap="switchLoopPlay">
+        {{isLoopPlay ? '关闭循环播放' : '开启循环播放'}}
+      </button>
+    </view>
+    <view class="btn-set-row">
+      <button type="mini" size="mini" bindtap="switchPlayBtn">
+        {{isShowPlayBtn ? '隐藏播放按钮' : '显示播放按钮'}}
+      </button>
+      <button type="mini" size="mini" bindtap="switchControls">
+        {{isShowControls ? '隐藏全部控件' : '显示全部控件'}}
+      </button>
+    </view>
+    <view class="btn-set-row">
+      <button type="mini" size="mini" bindtap="switchPlayBtnPosition">
+        {{playBtnPosition === 'center' ? '播放按钮下移' : '播放按钮居中'}}
+      </button>
+      <button type="mini" size="mini" bindtap="switchFit">
+        裁剪模式切换
+      </button>
+    </view>
+  </view>
+</view>

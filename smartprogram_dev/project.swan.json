@@ -1,4 +1,9 @@
 {
+    "compilation-args": {
+        "common": {
+            "ignoreTransJs": false
+        }
+    },
     "host": "baiduboxapp",
     "projectname": "smartprogram_dev",
     "setting": {

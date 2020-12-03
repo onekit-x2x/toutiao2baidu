@@ -26,6 +26,10 @@ Component({
       type: Boolean,
       value: false
     },
+    value: {
+      type: Number,
+      value: 0
+    },
     color: {
       type: String,
       value: '#e9e9e9'
@@ -40,7 +44,7 @@ Component({
     },
     backgroundColor: {
       type: String,
-      value: '#1aad19'
+      value: '#e9e9e9'
     },
     blockSize: {
       type: Number,
@@ -51,19 +55,19 @@ Component({
       value: '#ffffff'
     },
     showValue: {
-      type: Number,
-      value: 0
+      type: Boolean,
+      value: false
     },
   },
 
   methods: {
     slider_Change(e) {
       console.log('slider_Change', e)
-      this.triggerEvent('Change', e.details)
+      this.triggerEvent('change', e.details)
     },
     slider_Changing(e) {
       console.log('slider_Changing', e)
-      this.triggerEvent('Changing', e.details)
+      this.triggerEvent('changing', e.details)
     }
   }
 })

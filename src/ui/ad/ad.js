@@ -37,13 +37,12 @@ Component({
       }
     }
     //
-    let fixed
-    let static
-    if (this.properties.fixed === true) {
-      this.properties.fixed = fixed
-    } else {
-      this.properties.fixed = static
-    }
+    // let fixed
+    // if (this.properties.fixed === true) {
+    //   this.properties.fixed = fixed
+    // } else {
+    //   this.properties.fixed = static
+    // }
     //
     // let type = this.properties.type
     // const scale = this.properties.scale
@@ -74,7 +73,6 @@ Component({
     // }
     //
     this.setData({
-      fixed: this.properties.fixed,
       adIntervals
     })
   },

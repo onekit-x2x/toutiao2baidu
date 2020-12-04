@@ -264,23 +264,74 @@ import {OnekitPage, tt} from '../toutiao2baidu/index';
 // });
 
 // live-player
-OnekitPage({
-    data:{
-        fullScreenDirection:0
-    },
-    statechange:function(e){
-        console.log("状态变化",e);
-    },
-    requestFs:function(){
-        if(!this.ctx){
-        this.ctx = tt.createLivePlayerContext("my-player");
-    }
-        console.log("fullScreenDirection",this.data.fullScreenDirection);
-        this.ctx.requestFullScreen({
-        direction:Number(this.data.fullScreenDirection)
-    });
-    },
-    exitFs:function(){
-        this.ctx.exitFullScreen();
-    }
-});
+// OnekitPage({
+//     data:{
+//         fullScreenDirection:0
+//     },
+//     statechange:function(e){
+//         console.log("状态变化",e);
+//     },
+//     requestFs:function(){
+//         if(!this.ctx){
+//         this.ctx = tt.createLivePlayerContext("my-player");
+//     }
+//         console.log("fullScreenDirection",this.data.fullScreenDirection);
+//         this.ctx.requestFullScreen({
+//         direction:Number(this.data.fullScreenDirection)
+//     });
+//     },
+//     exitFs:function(){
+//         this.ctx.exitFullScreen();
+//     }
+// });
+
+//camera
+// OnekitPage({
+//     data:{},
+//     onLoad:function(options){
+//         tt.getSetting({
+//         success:(res)=>{
+//             var cameraAllowed = res.authSetting["scope.camera"];
+//             if(!cameraAllowed){
+//                 tt.showToast({
+//                     title:"请授权相机后重新进入",
+//                     success:(res)=>{this.auth()}
+//                 });
+//             }
+//         }
+//     });
+//     },
+//     auth:function(){
+//         tt.authorize({
+//         scope:"scope.camera",
+//         success:function(){
+//             tt.showToast({
+//             title:"授权成功",
+//             success:function(){
+//                 tt.reLaunch({
+//                 url:"/pages/index/index"
+//             });
+//             }
+//         });
+//         },
+//         fail:function(err){
+//             tt.showModal({
+//             content:("授权失败：" + JSON.stringify(err))
+//         });
+//         }
+//     });
+//     },
+//     onInitdone:function(e){
+//         tt.showToast({
+//         title:"相机初始化完成"
+//     });
+//     },
+//     onStop:function(e){
+//         console.log("相机中断");
+//     },
+//     onError:function(e){
+//         tt.showModal({
+//         content:("相机出错了：" + e.detail.errMsg)
+//     });
+//     }
+// });

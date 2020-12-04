@@ -1,30 +1,11 @@
-<button
-scope="phoneNumber"
-  bindtap="button_onTap"
-  size="{{size}}"
-  type="{{type}}"
-  plain="{{plain}}"
-  disabled="{{disabled}}"
-  loading="{{loading}}"
-  formType="{{formType}}"
-  open-type="{{openType}}"
-  onError="onError"
-  hover-class="{{hover-class}}"
-  hover-stop-propagation="{{hover-stop-propagation}}"
-  hover-start-time="{{hover-start-time}}"
-  hover-stay-time="{{hover-stay-time}}"
-  lang="{{lang}}"
-  bindgetuserinfo="{{bindgetuserinfo}}"
-  session-from="{{session-from}}"
-  send-message-title="{{send-message-title}}"
-  send-message-path="{{send-message-path}}"
-  send-message-img="{{send-message-img}}"
-  show-message-card="{{show-message-card}}"
-  bindcontact="{{bindcontact}}"
-  bindgetphonenumber="{{bindgetphonenumber}}"
-  app-parameter="{{app-parameter}}"
-  bindlaunchapp="{{bindlaunchapp}}"
-  bindopensetting="{{bindopensetting}}"
-  >
- <slot/>
-</button> 
+<camera
+class="onekit-camera {{onekitClass}}"
+style="postion:{{fixed}};{{onekitStyle}}"
+id="{{onekitId}}"
+
+device-position="audevicePosition"
+
+bindstop="camera_stop"
+binderror="camera_error"
+>
+</camera> 

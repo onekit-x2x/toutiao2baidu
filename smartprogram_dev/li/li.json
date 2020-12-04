@@ -2,7 +2,6 @@
     "usingComponents":{
         "onekit-slider":"../toutiao2baidu/ui/slider/slider",
         "onekit-text":"../toutiao2baidu/ui/text/text",
-        "onekit-video":"../toutiao2baidu/ui/video/video",
-        "onekit-live-player":"../toutiao2baidu/ui/live-player/live-player"
+        "onekit-video":"../toutiao2baidu/ui/video/video"
     }
 }

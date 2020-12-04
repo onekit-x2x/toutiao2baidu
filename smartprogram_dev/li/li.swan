@@ -172,7 +172,7 @@
 </view> -->
 
 <!-- <live-player> -->
-<onekit-live-player
+<!-- <onekit-live-player
   onekitId="my-player"
   src="https://zuikzy.603ee.com/2019/05/06/Et6dCHH62ojQBCqB/playlist.m3u8"
   autoplay
@@ -184,4 +184,14 @@
   <button bindtap="exitFs" size="mini" hidden="{{!isFullscreen}}">
     退出全屏
   </button>
-</onekit-live-player>
+</onekit-live-player> -->
+
+<!-- <camera> -->
+<!-- <onekit-camera
+  device-position="back"
+  bindinitdone="onInitdone"
+  binderror="onError"
+  bindstop="onStop"
+  style="width: 100%; height: 300px;"
+>
+</onekit-camera> -->

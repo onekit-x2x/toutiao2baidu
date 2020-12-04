@@ -96,7 +96,56 @@ export default class tt {
   static saveImageToPhotosAlbum(options) {
     return swan.saveImageToPhotosAlbum(options)
   }
+
+  static previewImage(options) {
+    return swan.previewImage(options)
+  }
+
+  static getImageInfo(options) {
+    return swan.getImageInfo(options)
+  }
+
+  static compressImage(options) {
+    return swan.compressImage(options)
+  }
+
+  static getRecorderManager() {
+    return swan.getRecorderManager()
+  }
+
+  static createInnerAudioContext() {
+    return swan.createInnerAudioContext()
+  }
+
+  static getBackgroundAudioManager() {
+    return swan.getBackgroundAudioManager()
+  }
+
+  static chooseVideo() {
+    return swan.chooseVideo()
+  }
+
+  static saveVideoToPhotosAlbum() {
+    return swan.saveVideoToPhotosAlbum()
+  }
+
+  static createVideoContext() {
+    return swan.createVideoContext()
+  }
+
+  static createLivePlayerContext() {
+    return swan.createLivePlayerContext()
+  }
+
+  static createCameraContext() {
+    return swan.createCameraContext()
+  }
+
+  static createMapContext() {
+    return swan.createCameraContext()
+  }
 }
+
 
 //   // ///////////////// animation //////////////////////////
 //   static createAnimation(object) { return swan.createAnimation(object) }

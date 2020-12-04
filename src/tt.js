@@ -72,7 +72,32 @@ export default class tt {
     }
     return Object(obj)
   }
+
+  static downloadFile(optios) {
+    return swan.downloadFile(optios)
+  }
+
+  static request(options) {
+    return swan.request(options)
+  }
+
+  static uploadFile(options) {
+    return swan.uploadFile(options)
+  }
+
+  static connectSocket(options) {
+    return swan.connectSocket(options)
+  }
+
+  static chooseImage(options) {
+    return swan.chooseImage(options)
+  }
+
+  static saveImageToPhotosAlbum(options) {
+    return swan.saveImageToPhotosAlbum(options)
+  }
 }
+
 //   // ///////////////// animation //////////////////////////
 //   static createAnimation(object) { return swan.createAnimation(object) }
 

@@ -11,15 +11,15 @@ objectFit="{{objectFit}}"
 poster="{{poster}}" 
 show-fullscreen-btn="{{showFullscreenBtn}}" 
 show-play-btn="{{showPlayBtn}}"
-play-btn-position="{{playBtnPosition}}"
+show-center-play-btn="{{showCenterPlayBtn}}"
 
 bindplay="video_play"
 bindpause="video_pause"
 bindended="video_ended"
-binderror="video_error"
 bindtimeupdate="video_timeupdate"
 bindfullscreenchange="video_fullscreenchange"
 bindwaiting="video_waiting"
+binderror="video_error"
 >
 <slot></slot>
 </video>

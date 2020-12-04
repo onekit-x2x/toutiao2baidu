@@ -76,5 +76,14 @@ smartprogram_dev/li/li.swan
 smartprogram_dev/li/li.js
 smartprogram_dev/li/li.json
 smartprogram_dev/li/li.swan
+<<<<<<< Updated upstream
 smartprogram_dev/project.swan.json
 smartprogram_dev/toutiao2baidu/ui/video/video.swan
+=======
+smartprogram_dev/app.json
+smartprogram_dev/wang/wang.js
+smartprogram_dev/project.swan.json
+src/api/env.js
+src/ui/ad/ad.js
+>>>>>>> Stashed changes
+smartprogram_dev/app.json

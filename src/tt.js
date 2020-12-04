@@ -1,4 +1,4 @@
-import {STRING} from 'oneutil'
+// import {STRING} from 'oneutil'
 // import CanvasContext from './api/CanvasContext'
 // import VideoContext from './api/VideoContext'
 // import LivePlayerContext from './api/LivePlayerContext'
@@ -9,7 +9,9 @@ export default class tt {
   static canIuse() { return true }
 
   static base64ToArrayBuffer(base64) {
-    return STRING.base64ToArrayBuffer(base64)
+    base64 = base64.replace(/\s/g, '+')
+    const commonContent = Buffer.from(base64, 'base64')
+    return commonContent
   }
 
   static arrayBufferToBase64(arrybufferr) {
@@ -59,6 +61,16 @@ export default class tt {
 
   static offError(callback) {
     return swan.offError(callback)
+  }
+
+  static get env() {
+    const VERSION = 'production'
+    const USER_DATA_PATH = swan.env.USER_DATA_PATH
+    const obj = {
+      VERSION,
+      USER_DATA_PATH
+    }
+    return Object(obj)
   }
 }
 //   // ///////////////// animation //////////////////////////

@@ -19,17 +19,23 @@ Component({
       type: Boolean,
       value: null,
     },
-    type: {
+    type: {// 做不了
       type: String,
       value: 'banner'
     },
-    scale: {
+    scale: {// 做不了
       type: Number,
       value: 100
     }
   },
   data: {},
   attached() {
+    let adIntervals
+    if (this.properties.adIntervals) {
+      if (this.properties.type === 'banner' && this.properties.adIntervals >= 30) {
+        adIntervals = this.properties.adIntervals
+      }
+    }
     //
     let fixed
     let static
@@ -38,8 +44,38 @@ Component({
     } else {
       this.properties.fixed = static
     }
+    //
+    // let type = this.properties.type
+    // const scale = this.properties.scale
+    // swan.createSelectorQuery().select('.onekit-ad').boundingClientRect(rect => {
+    //   console.log('节点信息', rect)
+    // }).exec()
+    // if (type) {
+    //   switch (type) {
+    //     case 'banner':
+    //       type = 'banner'
+    //       // scale =
+    //       break
+    //     case 'video':
+    //       type = 'feed'
+    //       break
+    //     case 'large':
+    //       type = 'feed'
+    //       break
+    //     case 'lImg':
+    //       type = 'feed'
+    //       break
+    //     case 'rImg':
+    //       type = 'feed'
+    //       break
+    //     default:
+    //       break
+    //   }
+    // }
+    //
     this.setData({
-      fixed
+      fixed: this.properties.fixed,
+      adIntervals
     })
   },
 

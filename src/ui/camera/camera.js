@@ -1,7 +1,4 @@
 /* eslint-disable no-console */
-import tt from '../../tt'
-
-/* eslint-disable no-console */
 /* eslint-disable camelcase */
 import onekit_behavior from '../../behavior/onekit_behavior'
 import wxs_behavior from '../../behavior/wxs_behavior'
@@ -18,7 +15,7 @@ Component({
 
     bindgetuserinfo(info) {
       console.log('[UI]', info)
-      tt.getUserInfo({
+      swan.getUserInfo({
         success(res) {
           this.triggerEvent('getuserinfo', res)
         }
@@ -28,7 +25,7 @@ Component({
       console.log(info)
       console.log(this.properties)
 
-    //    tt.getUserInfo({
+    //    swan.getUserInfo({
     //            success(res){
     //         console.log("[API]",res);
     //         }

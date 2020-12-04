@@ -2,20 +2,16 @@
 class="onekit-live-player {{onekitClass}}"
 style="{{onekitStyle}}"
 id="{{onekitId}}"
+
 src="{{src}}"
 autoplay="{{autoplay}}"
 muted="{{muted}}"
 orientation ="{{orientation}}"
 object-fit="{{objectFit}}"
-background-mute="{{backgroundMute}}"
-min-cache="{{minCache}}"
-max-cache="{{maxCache}}"
 
-bindstatechange="live_player_statechange"
-bindnetstatus="live_player_netstatus"
-bindfullscreenchange="live_player_fullscreenchange"
-
-
+bindstatechange="live_statechange"
+bindnetstatus="live_netstatus"
+bindfullscreenchange="live_fullscreenchange"
 >
     <slot></slot>
 </live-player>

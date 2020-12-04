@@ -7,34 +7,34 @@ import weixin_behavior from '../../behavior/weixin_behavior'
 Component({
   behaviors: [onekit_behavior, wxs_behavior, weixin_behavior],
   properties: {
-    propName: {
-      onekitClass: {
-        type: String,
-        value: ''
-      },
-      onekitStyle: {
-        type: String,
-        value: ''
-      },
-      onekitId: {
-        type: String,
-        value: ''
-      },
+    src: {
+      type: String,
+      value: 'N/A'
+    },
+    progressbarColor: {
+      type: String,
+      value: '#51a0d8'
     }
   },
 
-  data: {}, // 私有数据，可用于模版渲染
-
-  // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+  data: {},
   attached() { },
 
   detached() { },
 
   methods: {
-    onTap() {
-      this.setData({
-        // 更新属性和数据的方法与更新页面数据的方法类似
-      })
-    }
+    web_message(e) {
+      console.log('message', e)
+      this.triggerEvent('message', e)
+    },
+    //
+    trigger_load(e) {
+      console.log('load', e)
+      this.triggerEvent('load', e)
+    },
+    trigger_error(e) {
+      console.log('error', e)
+      this.triggerEvent('error', e)
+    },
   }
 })

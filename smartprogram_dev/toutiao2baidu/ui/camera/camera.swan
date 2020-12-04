@@ -8,4 +8,5 @@ device-position="audevicePosition"
 bindstop="camera_stop"
 binderror="camera_error"
 >
+camera 不翻译
 </camera> 

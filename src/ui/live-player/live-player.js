@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable no-console */
 /* eslint-disable camelcase */
 import onekit_behavior from '../../behavior/onekit_behavior'
 import wxs_behavior from '../../behavior/wxs_behavior'
@@ -31,32 +30,24 @@ Component({
       type: String,
       value: 'contain',
     },
-    backgroundMute: {
-      type: Boolean,
-      value: false,
-    },
-    minCache: {
-      type: Number,
-      value: '1',
-    },
-    maxCache: {
-      type: Number,
-      value: '3',
-    },
   },
 
   methods: {
-    live_player_statechange(e) {
-      console.log('live_player_statechange', e)
+    live_statechange(e) {
+      console.log('statechange', e)
       this.triggerEvent('statechange', e.details)
     },
-    live_player_netstatus(e) {
-      console.log('live_player_netstatus', e)
+    live_netstatus(e) {
+      console.log('netstatus', e)
       this.triggerEvent('netstatus', e.details)
     },
-    live_player_fullscreenchange(e) {
-      console.log('live_player_fullscreenchange', e)
+    live_fullscreenchange(e) {
+      console.log('fullscreenchange', e)
       this.triggerEvent('fullscreenchange', e.details)
+    },
+    trigger_error(e) {
+      console.log('error', e)
+      this.triggerEvent('error', e.details)
     },
   }
 })

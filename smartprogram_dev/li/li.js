@@ -135,130 +135,203 @@ import {OnekitPage, tt} from '../toutiao2baidu/index';
 // });
 
 //video
-function getRandomColor(){
-    const rgb = [
-    ];
-    for(var i = 0;(i < 3);++i){
-        var color = Math.floor((Math.random() * 256)).toString(16);
-        color = (color.length == 1)?('0' + color):color;
-        rgb.push(color);
-    };
-    return ('#' + rgb.join(''));
-};
-OnekitPage({
-    onReady:function(res){
-    },
-    inputValue:'',
-    data:{
-        src:'',
-        danmuList:[
-            {
-                text:'第 1s 出现的弹幕',
-                color:'#ff0000',
-                time:1
-            },
-            {
-                text:'第 3s 出现的弹幕',
-                color:'#ff00ff',
-                time:3
-            }
-        ],
-        isFullscreen:false,
-        isLoopPlay:false,
-        isShowPlayBtn:true,
-        isShowControls:true,
-        playBtnPosition:'center',
-        objectFitNum:0,
-        objectFitType:'contain',
-        poster:"https://s3.pstatp.com/toutiao/static/img/logo.201f80d.png",
-        unitId:'hefbc5g67f9g1axb6p'
-    },
-    bindadload:function(e){
-        console.log('广告加载成功',e);
-    },
-    bindaderror:function(e){
-        console.log('广告出错',e);
-    },
-    bindadclose:function(e){
-        console.log('关闭广告',e);
-    },
-    bindadstart:function(e){
-        console.log('播放广告',e);
-    },
-    bindwaiting:function(e){
-        console.log('视频正在缓冲',e);
-    },
-    bindtimeupdate:function(e){
-    },
-    bindended:function(e){
-        console.log('视频已经播放结束',e);
-    },
-    bindpause:function(e){
-        console.log('视频暂停了',e);
-    },
-    bindplay:function(e){
-        console.log('视频开始播放了',e);
-    },
-    bindInputBlur:function(e){
-        this.inputValue = e.detail.value;
-    },
-    bindButtonTap:function(){
-        var that = this;
-        tt.chooseVideo({
-        sourceType:[
-            'album',
-            'camera'
-        ],
-        maxDuration:60,
-        camera:[
-            'front',
-            'back'
-        ],
-        success:function(res){
-            that.setData({
-            src:res.tempFilePath
-        });
-        }
-    });
-    },
-    videoErrorCallback:function(e){
-        console.log(e.detail.errMsg);
-    },
-    switchFullScreen:function(){
-        this.setData({
-        isFullscreen:!this.data.isFullscreen
-    });
-    },
-    switchLoopPlay:function(){
-        this.setData({
-        isLoopPlay:!this.data.isLoopPlay
-    });
-    },
-    switchPlayBtn:function(){
-        this.setData({
-        isShowPlayBtn:!this.data.isShowPlayBtn
-    });
-    },
-    switchControls:function(){
-        this.setData({
-        isShowControls:!this.data.isShowControls
-    });
-    },
-    switchPlayBtnPosition:function(){
-        console.log('switchPlayBtnPosition:',this.data.playBtnPosition);
-        this.setData({
-        playBtnPosition:(this.data.playBtnPosition === 'center')?'bottom':'center'
-    });
-    },
-    switchFit:function(){
-        const objectFitEnum = [
-        'contain',
-        'fill',
-        'cover'
-    ];
-        this.setData({
-        objectFitType:objectFitEnum[(this.data.objectFitNum % 3)],
-        objectFitNum:(this.data.objectFitNum + 1)
-    });
-    }
-});
+// function getRandomColor(){
+//     const rgb = [
+//     ];
+//     for(var i = 0;(i < 3);++i){
+//         var color = Math.floor((Math.random() * 256)).toString(16);
+//         color = (color.length == 1)?('0' + color):color;
+//         rgb.push(color);
+//     };
+//     return ('#' + rgb.join(''));
+// };
+// OnekitPage({
+//     onReady:function(res){
+//     },
+//     inputValue:'',
+//     data:{
+//         src:'',
+//         danmuList:[
+//             {
+//                 text:'第 1s 出现的弹幕',
+//                 color:'#ff0000',
+//                 time:1
+//             },
+//             {
+//                 text:'第 3s 出现的弹幕',
+//                 color:'#ff00ff',
+//                 time:3
+//             }
+//         ],
+//         isFullscreen:false,
+//         isLoopPlay:false,
+//         isShowPlayBtn:true,
+//         isShowControls:true,
+//         playBtnPosition:'center',
+//         objectFitNum:0,
+//         objectFitType:'contain',
+//         poster:"https://s3.pstatp.com/toutiao/static/img/logo.201f80d.png",
+//         unitId:'hefbc5g67f9g1axb6p'
+//     },
+//     bindadload:function(e){
+//         console.log('广告加载成功',e);
+//     },
+//     bindaderror:function(e){
+//         console.log('广告出错',e);
+//     },
+//     bindadclose:function(e){
+//         console.log('关闭广告',e);
+//     },
+//     bindadstart:function(e){
+//         console.log('播放广告',e);
+//     },
+//     bindwaiting:function(e){
+//         console.log('视频正在缓冲',e);
+//     },
+//     bindtimeupdate:function(e){
+//     },
+//     bindended:function(e){
+//         console.log('视频已经播放结束',e);
+//     },
+//     bindpause:function(e){
+//         console.log('视频暂停了',e);
+//     },
+//     bindplay:function(e){
+//         console.log('视频开始播放了',e);
+//     },
+//     bindInputBlur:function(e){
+//         this.inputValue = e.detail.value;
+//     },
+//     bindButtonTap:function(){
+//         var that = this;
+//         tt.chooseVideo({
+//         sourceType:[
+//             'album',
+//             'camera'
+//         ],
+//         maxDuration:60,
+//         camera:[
+//             'front',
+//             'back'
+//         ],
+//         success:function(res){
+//             that.setData({
+//             src:res.tempFilePath
+//         });
+//         }
+//     });
+//     },
+//     videoErrorCallback:function(e){
+//         console.log(e.detail.errMsg);
+//     },
+//     switchFullScreen:function(){
+//         this.setData({
+//         isFullscreen:!this.data.isFullscreen
+//     });
+//     },
+//     switchLoopPlay:function(){
+//         this.setData({
+//         isLoopPlay:!this.data.isLoopPlay
+//     });
+//     },
+//     switchPlayBtn:function(){
+//         this.setData({
+//         isShowPlayBtn:!this.data.isShowPlayBtn
+//     });
+//     },
+//     switchControls:function(){
+//         this.setData({
+//         isShowControls:!this.data.isShowControls
+//     });
+//     },
+//     switchPlayBtnPosition:function(){
+//         console.log('switchPlayBtnPosition:',this.data.playBtnPosition);
+//         this.setData({
+//         playBtnPosition:(this.data.playBtnPosition === 'center')?'bottom':'center'
+//     });
+//     },
+//     switchFit:function(){
+//         const objectFitEnum = [
+//         'contain',
+//         'fill',
+//         'cover'
+//     ];
+//         this.setData({
+//         objectFitType:objectFitEnum[(this.data.objectFitNum % 3)],
+//         objectFitNum:(this.data.objectFitNum + 1)
+//     });
+//     }
+// });
+
+// live-player
+// OnekitPage({
+//     data:{
+//         fullScreenDirection:0
+//     },
+//     statechange:function(e){
+//         console.log("状态变化",e);
+//     },
+//     requestFs:function(){
+//         if(!this.ctx){
+//         this.ctx = tt.createLivePlayerContext("my-player");
+//     }
+//         console.log("fullScreenDirection",this.data.fullScreenDirection);
+//         this.ctx.requestFullScreen({
+//         direction:Number(this.data.fullScreenDirection)
+//     });
+//     },
+//     exitFs:function(){
+//         this.ctx.exitFullScreen();
+//     }
+// });
+
+//camera
+// OnekitPage({
+//     data:{},
+//     onLoad:function(options){
+//         tt.getSetting({
+//         success:(res)=>{
+//             var cameraAllowed = res.authSetting["scope.camera"];
+//             if(!cameraAllowed){
+//                 tt.showToast({
+//                     title:"请授权相机后重新进入",
+//                     success:(res)=>{this.auth()}
+//                 });
+//             }
+//         }
+//     });
+//     },
+//     auth:function(){
+//         tt.authorize({
+//         scope:"scope.camera",
+//         success:function(){
+//             tt.showToast({
+//             title:"授权成功",
+//             success:function(){
+//                 tt.reLaunch({
+//                 url:"/pages/index/index"
+//             });
+//             }
+//         });
+//         },
+//         fail:function(err){
+//             tt.showModal({
+//             content:("授权失败：" + JSON.stringify(err))
+//         });
+//         }
+//     });
+//     },
+//     onInitdone:function(e){
+//         tt.showToast({
+//         title:"相机初始化完成"
+//     });
+//     },
+//     onStop:function(e){
+//         console.log("相机中断");
+//     },
+//     onError:function(e){
+//         tt.showModal({
+//         content:("相机出错了：" + e.detail.errMsg)
+//     });
+//     }
+// });

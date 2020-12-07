@@ -14,6 +14,7 @@ $RECYCLE.BIN/
 node_modules/
 smartprogram_dev/
 smartprogram_dev/app.json
+smartprogram_dist/
 .DS_Store
 dist
 smartprogram_dev/li/li.js

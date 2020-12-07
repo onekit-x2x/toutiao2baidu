@@ -1,6 +1,6 @@
 {
   "name": "toutiao2baidu",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "init": "git submodule init && git submodule update --init --remote && npm run dev",
@@ -36,7 +36,8 @@
   "author": "xushengni,sanfordsusn",
   "license": "MIT",
   "dependencies": {
-    "oneutil": "1.5.3"
+    "express": "^4.17.1",
+    "oneutil": "^1.5.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

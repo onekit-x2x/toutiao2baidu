@@ -125,4 +125,8 @@ export default class CanvasContext {
   getActions() {
     return this.baiduCanvasContext.getActions()
   }
+
+  fillText() {
+    return this.baiduCanvasContext.fillText()
+  }
 }

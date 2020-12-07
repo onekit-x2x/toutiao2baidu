@@ -76,9 +76,10 @@ export default class CanvasContext {
     return this.baiduCanvasContext.closePath()
   }
 
-  // fillText(text, x, y, maxWidth) {
-  //   return this.baiduCanvasContext.fillText(text, x, y)
-  // }
+  fillText(text, x, y, maxWidth) {
+    const next = this.baiduCanvasContext.rect(x, y, maxWidth)
+    return next.fillText(text, x, y)
+  }
 
   // drawImage(imageResource, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) {
   //   return this.baiduCanvasContext.drawImage(imageResource, x, y, width, height)
@@ -126,7 +127,7 @@ export default class CanvasContext {
     return this.baiduCanvasContext.getActions()
   }
 
-  fillText() {
-    return this.baiduCanvasContext.fillText()
-  }
+  // fillText(text, x, y, maxWidth) {
+  //   return this.baiduCanvasContext.fillText(text, x, y)
+  // }
 }

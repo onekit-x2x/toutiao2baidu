@@ -1,9 +1,0 @@
-<web-view
-class="onekit-web-view {{onekitClass}}"
-style="{{onekitStyle}}"
-id="{{onekitId}}"
-
-src="{{src}}"
-
-bindmessage="web_message"
-></web-view>

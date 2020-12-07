@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // import {STRING} from 'oneutil'
 import CanvasContext from './api/CanvasContext'
 // import VideoContext from './api/VideoContext'

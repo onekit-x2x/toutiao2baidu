@@ -16,9 +16,14 @@ Component({
       value: '#51a0d8'
     }
   },
-
-  data: {},
-  attached() { },
+  data: {
+    percent: 0
+  },
+  attached() {
+    if (this.properties.percent === 100) {
+      this.trigger_load()
+    }
+  },
 
   detached() { },
 
@@ -27,11 +32,11 @@ Component({
       console.log('message', e)
       this.triggerEvent('message', e)
     },
-    //
     trigger_load(e) {
       console.log('load', e)
       this.triggerEvent('load', e)
     },
+    //
     trigger_error(e) {
       console.log('error', e)
       this.triggerEvent('error', e)

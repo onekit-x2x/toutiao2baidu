@@ -7,3 +7,6 @@ src="{{src}}"
 
 bindmessage="web_message"
 ></web-view>
+<cover-view>
+    <progress percent="{{percent}}" active activeColor="{{progressbarColor}}" color="{{progressbarColor}}"/>
+</cover-view>

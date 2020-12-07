@@ -45,7 +45,8 @@ Component({
       console.log('fullscreenchange', e)
       this.triggerEvent('fullscreenchange', e.details)
     },
-    trigger_error(e) {
+    //
+    trigger_error(e) { // 做不了
       console.log('error', e)
       this.triggerEvent('error', e.details)
     },

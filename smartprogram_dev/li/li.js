@@ -285,7 +285,7 @@ import {OnekitPage, tt} from '../toutiao2baidu/index';
 //     }
 // });
 
-//camera
+// camera
 // OnekitPage({
 //     data:{},
 //     onLoad:function(options){

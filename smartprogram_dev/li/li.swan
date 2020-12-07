@@ -187,14 +187,14 @@
 </onekit-live-player> -->
 
 <!-- <camera> -->
-<!-- <onekit-camera
+<!-- <camera
   device-position="back"
   bindinitdone="onInitdone"
   binderror="onError"
   bindstop="onStop"
   style="width: 100%; height: 300px;"
 >
-</onekit-camera> -->
+</camera> -->
 
 <!-- <canvas> -->
 <!-- <view class="container">

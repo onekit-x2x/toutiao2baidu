@@ -834,9 +834,6 @@ return swan.stopBluetoothDevicesDiscovery(object);
       fail(res) {
         console.log(res)
       },
-      // fail(res) {
-      //   console.log(res)
-      // }
     })
   }
 
@@ -914,12 +911,16 @@ return swan.stopBluetoothDevicesDiscovery(object);
     return swan.updateShareMenu(object)
   }
 
-  static showShareMenu(object) {
-    return swan.showShareMenu(object)
+  static showShareMenu() {
+    console.error('Baidu is not support!')
   }
 
-  static hideShareMenu(object) {
-    return swan.hideShareMenu(object)
+  static hideShareMenu() {
+    console.error('Baidu is not support!')
+  }
+
+  static navigateToVideoView() {
+    console.error('Baidu is not support!')
   }
 
   static getShareInfo(object) {
@@ -980,8 +981,6 @@ return swan.stopBluetoothDevicesDiscovery(object);
     console.error('showInteractionBar is not support in Baidu')
   }
 
-  // static redirectTo(object) { return swan.redirectTo(object) }
-  // static redirectTo(object) { return swan.redirectTo(object) }
   static hideLoading(object) {
     return swan.hideLoading(object)
   }
@@ -1015,7 +1014,7 @@ return swan.stopBluetoothDevicesDiscovery(object);
   }
 
   static hideHomeButton() {
-    console.error('Baidu is note support!')
+    console.error('Baidu is note support hideHomeButton!')
   }
 
   static setNavigationBarTitle(object) {
@@ -1128,6 +1127,6 @@ return swan.stopBluetoothDevicesDiscovery(object);
 
   // /////////////////////////////////
   static createARCameraContext() {
-    throw new Error('tt is not support createARCameraContext!!')
+    console.error('Baidu is not support createARCameraContext!!')
   }
 }

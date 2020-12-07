@@ -10,7 +10,7 @@ Component({
     addGlobalClass: true,
   },
   properties: {
-    resolution: {
+    resolution: {// 做不了
       type: String,
       value: 'medium'
     },
@@ -18,7 +18,7 @@ Component({
       type: String,
       value: 'back'
     },
-    frameSize: {
+    frameSize: {// 做不了
       type: String,
       value: 'medium'
     },

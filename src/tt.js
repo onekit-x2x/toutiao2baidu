@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 // import {STRING} from 'oneutil'
-// import VideoContext from './api/VideoContext'
 // import LivePlayerContext from './api/LivePlayerContext'
 // import CameraContext from './api/CameraContext'
 
@@ -648,40 +647,41 @@ return swan.stopBluetoothDevicesDiscovery(object);
     }
   }
 
-  // static login = function (object) {
-  //   if (!object) {
-  //     return swan.login(object)
-  //   }
-  //   const object2 = {}
-  //   object2.success = function (res) {
-  //     getApp().onekitwx._jscode = res.code
-  //     getApp().onekitwx._login = new Date().getTime()
-  //     const result = {
-  //       code: res.code
-  //     }
-  //     if (object.success) {
-  //       object.success(result)
-  //     }
-  //     if (object.complete) {
-  //       object.complete()
-  //     }
-  //   }
-  //   object2.fail = function (res) {
-  //     if (object.fail) {
-  //       object.fail(res)
-  //     }
-  //     if (object.complete) {
-  //       object.complete(res)
-  //     }
-  //   }
-  //   if (tt._checkSession()) {
-  //     object2.success({
-  //       code: getApp().onekitwx._jscode
-  //     })
-  //   } else {
-  //     swan.login(object2)
-  //   }
-  // };
+  static login(object) {
+    if (!object) {
+      swan.login(object)
+      return
+    }
+    const object2 = {}
+    object2.success = function (res) {
+      getApp().onekitwx._jscode = res.code
+      getApp().onekitwx._login = new Date().getTime()
+      const result = {
+        code: res.code
+      }
+      if (object.success) {
+        object.success(result)
+      }
+      if (object.complete) {
+        object.complete()
+      }
+    }
+    object2.fail = function (res) {
+      if (object.fail) {
+        object.fail(res)
+      }
+      if (object.complete) {
+        object.complete(res)
+      }
+    }
+    if (tt._checkSession()) {
+      object2.success({
+        code: getApp().onekitwx._jscode
+      })
+    } else {
+      swan.login(object2)
+    }
+  }
 
   static _getUserInfo(data, callback) {
     tt.login({
@@ -972,6 +972,29 @@ return swan.stopBluetoothDevicesDiscovery(object);
     return swan.showActionSheet(object)
   }
 
+  static showFavoriteGuide(options) {
+    return swan.showFavoriteGuide(options)
+  }
+
+  static showInteractionBar(optioons) {
+    const baiduSuccess = optioons.success
+    const res = {
+      app_id: '',
+      app_name: '',
+      app_version: '',
+      cid: '',
+      device_id: '',
+      log_extra: {},
+      net_type: '',
+      user_id: {},
+      value: '',
+      version_code: ''
+    }
+    if (baiduSuccess) {
+      baiduSuccess(res)
+    }
+  }
+
   // static redirectTo(object) { return swan.redirectTo(object) }
   // static redirectTo(object) { return swan.redirectTo(object) }
   static hideLoading(object) {
@@ -1107,6 +1130,6 @@ return swan.stopBluetoothDevicesDiscovery(object);
 
   // /////////////////////////////////
   static createARCameraContext() {
-    throw new Error('createARCameraContext�ݲ�֧��!!')
+    throw new Error('tt is not support createARCameraContext!!')
   }
 }

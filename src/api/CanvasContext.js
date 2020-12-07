@@ -78,7 +78,7 @@ export default class CanvasContext {
 
   fillText(text, x, y, maxWidth) {
     // const next = this.baiduCanvasContext.rect(x, y, maxWidth)
-    return this.baiduCanvasContext.fillText(text, x, y, maxWidth)   
+    return this.baiduCanvasContext.fillText(text, x, y, maxWidth)
   }
 
   // drawImage(imageResource, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) {

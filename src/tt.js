@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 // import {STRING} from 'oneutil'
-import CanvasContext from './api/CanvasContext'
+// import CanvasContext from './api/CanvasContext'
 // import VideoContext from './api/VideoContext'
 // import LivePlayerContext from './api/LivePlayerContext'
 // import CameraContext from './api/CameraContext'
@@ -174,7 +174,8 @@ export default class tt {
   }
 
   static createCanvasContext(canvasId) {
-    return new CanvasContext(swan.createCanvasContext(canvasId))
+    // return new CanvasContext(swan.createCanvasContext(canvasId))
+    return swan.createCanvasContext(canvasId)
   }
 
 

@@ -140,8 +140,9 @@ export default class tt {
     return swan.createLivePlayerContext()
   }
 
-  static createCameraContext() {
-    return new CameraContext(swan.createCameraContext())
+  static createCameraContext(id) {
+    // return new CameraContext(swan.createCameraContext())
+    return swan.createCanvasContext(id)
   }
 
   static createMapContext() {

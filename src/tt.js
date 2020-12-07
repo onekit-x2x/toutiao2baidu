@@ -1066,20 +1066,24 @@ return swan.stopBluetoothDevicesDiscovery(object);
     return swan.loadFontFace(object)
   }
 
+  static pageScrollTo(object) {
+    return swan.pageScrollTo(object)
+  }
+
+  static onPullDownRefresh() {
+    return swan.onPullDownRefresh()
+  }
+
+  static setTopBarText(object) {
+    return swan.setTopBarText(object)
+  }
+
   static stopPullDownRefresh(object) {
     return swan.stopPullDownRefresh(object)
   }
 
   static startPullDownRefresh(object) {
     return swan.startPullDownRefresh(object)
-  }
-
-  static pageScrollTo(object) {
-    return swan.pageScrollTo(object)
-  }
-
-  static setTopBarText(object) {
-    return swan.setTopBarText(object)
   }
 
   static nextTick(object) {
@@ -1090,6 +1094,10 @@ return swan.stopBluetoothDevicesDiscovery(object);
     return swan.getMenuButtonBoundingClientRect(object)
   }
 
+
+  static createAnimation(options) {
+    return swan.createAnimation(options)
+  }
 
   static offWindowResize(object) {
     return swan.offWindowResize(object)

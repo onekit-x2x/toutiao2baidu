@@ -318,11 +318,11 @@ export default class tt {
   }
 
 
-  static getNetworkType = function (object) {
+  static getNetworkType(object) {
     return swan.getNetworkType(object)
   }
 
-  static _network = function (res) {
+  static _network(res) {
     return swan._network(res)
   }
 
@@ -331,11 +331,11 @@ export default class tt {
   }
 
   //
-  static makePhoneCall = function (object) {
+  static makePhoneCall(object) {
     return swan.makePhoneCall(object)
   }
 
-  static scanCode = function (object) {
+  static scanCode(object) {
     return swan.scanCode(object)
   }
 
@@ -733,11 +733,11 @@ return swan.stopBluetoothDevicesDiscovery(object);
     })
   }
 
-  static getOpenData = function (object) {
+  static getOpenData(object) {
     return swan.getOpenData(object)
   }
 
-  static _getPhoneNumber = function (data, callback) {
+  static _getPhoneNumber(data, callback) {
     tt.login({
       success: (res) => {
         const code = res.code
@@ -765,7 +765,7 @@ return swan.stopBluetoothDevicesDiscovery(object);
     })
   }
 
-  static getPhoneNumber = function (object) {
+  static getPhoneNumber(object) {
     getApp().onekitwx._bindgetphonenumber = (data) => {
       tt._getPhoneNumber(data, (res) => {
         if (object.success) {
@@ -779,7 +779,7 @@ return swan.stopBluetoothDevicesDiscovery(object);
     swan.navigateTo({
       url: 'page/getphonenumber'
     })
-  };
+  }
 
   static navigateToMiniProgram(object) {
     return swan.navigateToMiniProgram(object)
@@ -859,7 +859,7 @@ return swan.stopBluetoothDevicesDiscovery(object);
     return swan.openCard(object)
   }
 
-  static addCard = function (object) {
+  static addCard(object) {
     return swan.addCard(object)
   }
 
@@ -1005,9 +1005,9 @@ return swan.stopBluetoothDevicesDiscovery(object);
     return swan.showNavigationBarLoading(object)
   }
 
-  static setNavigationBarTitle = function (object) {
+  static setNavigationBarTitle(object) {
     return swan.setNavigationBarTitle(object)
-  };
+  }
 
   static setBackgroundTextStyle(object) {
     return swan.setBackgroundTextStyle(object)

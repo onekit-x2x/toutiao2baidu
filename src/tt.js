@@ -976,23 +976,8 @@ return swan.stopBluetoothDevicesDiscovery(object);
     return swan.showFavoriteGuide(options)
   }
 
-  static showInteractionBar(optioons) {
-    const baiduSuccess = optioons.success
-    const res = {
-      app_id: '',
-      app_name: '',
-      app_version: '',
-      cid: '',
-      device_id: '',
-      log_extra: {},
-      net_type: '',
-      user_id: {},
-      value: '',
-      version_code: ''
-    }
-    if (baiduSuccess) {
-      baiduSuccess(res)
-    }
+  static showInteractionBar() {
+    console.error('showInteractionBar is not support in Baidu')
   }
 
   // static redirectTo(object) { return swan.redirectTo(object) }
@@ -1027,6 +1012,10 @@ return swan.stopBluetoothDevicesDiscovery(object);
 
   static showNavigationBarLoading(object) {
     return swan.showNavigationBarLoading(object)
+  }
+
+  static hideHomeButton() {
+    console.error('Baidu is note support!')
   }
 
   static setNavigationBarTitle(object) {
@@ -1100,6 +1089,7 @@ return swan.stopBluetoothDevicesDiscovery(object);
   static getMenuButtonBoundingClientRect(object) {
     return swan.getMenuButtonBoundingClientRect(object)
   }
+
 
   static offWindowResize(object) {
     return swan.offWindowResize(object)

@@ -50,11 +50,11 @@
 </view> -->
 
 <!-- <swiper> -->
-<!-- <view class="container">
+<view class="container">
   <view class="body body-space">
     <view class="page-section">
-      <onekit-swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="rgba(0, 0, 0, 1)" current="{{0}}" current-item-id="" previous-margin="" next-margin="" display-multiple-items="{{1}}"  autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" vertical="{{vertical}}" duration="{{duration}}" bindanimationfinish="animationFinish" bindtransition="transition" >
-        <block tt:for="{{background}}">
+      <onekit-swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="rgba(0, 0, 0, 1)" current="{{0}}" current-item-id previous-margin next-margin display-multiple-items="{{1}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" vertical="{{vertical}}" duration="{{duration}}" bindAnimationfinish="animationFinish" bindTransition="transition">
+        <block s-for="background">
           <swiper-item>
             <view class="swiper-item {{item}}"></view>
           </swiper-item>
@@ -66,43 +66,43 @@
         <view class="ttui-cell">
           <view class="ttui-cell__bd">指示点</view>
           <view class="ttui-cell__ft">
-            <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+            <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots"></switch>
           </view>
         </view>
         <view class="ttui-cell">
           <view class="ttui-cell__bd">自动播放</view>
           <view class="ttui-cell__ft">
-            <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
+            <switch checked="{{autoplay}}" bindchange="changeAutoplay"></switch>
           </view>
         </view>
         <view class="ttui-cell">
           <view class="ttui-cell__bd">循环播放</view>
           <view class="ttui-cell__ft">
-            <switch checked="{{circular}}" bindchange="changeCircular" />
+            <switch checked="{{circular}}" bindchange="changeCircular"></switch>
           </view>
         </view>
         <view class="ttui-cell">
           <view class="ttui-cell__bd">滑块放置方向是否为竖直</view>
           <view class="ttui-cell__ft">
-            <switch checked="{{vertical}}" bindchange="changeVertical" />
+            <switch checked="{{vertical}}" bindchange="changeVertical"></switch>
           </view>
         </view>
       </view>
     </view>
     <view class="page-section page-section-space">
       <view class="page-section-title">
-        <text>幻灯片切换时长(ms)</text>
-        <text class="info"> {{duration}}</text>
+        <onekit-text>幻灯片切换时长(ms)</onekit-text>
+        <onekit-text onekit-class="info"> {{duration}}</onekit-text>
       </view>
-      <slider bindchange="durationChange" value="{{duration}}" min="500" max="2000" />
+      <onekit-slider bindChange="durationChange" value="{{duration}}" min="500" max="2000"></onekit-slider>
       <view class="page-section-title">
-        <text>自动播放间隔时长(ms)</text>
-        <text class="info"> {{interval}}</text>
+        <onekit-text>自动播放间隔时长(ms)</onekit-text>
+        <onekit-text onekit-class="info"> {{interval}}</onekit-text>
       </view>
-      <slider bindchange="intervalChange" value="{{interval}}" min="2000" max="10000" />
+      <onekit-slider bindChange="intervalChange" value="{{interval}}" min="2000" max="10000"></onekit-slider>
     </view>
   </view>
-</view> -->
+</view>
 
 <!-- <text> -->
 <!-- <view class="container">
@@ -204,4 +204,4 @@
 </view> -->
 
 <!-- <web-view> -->
-<onekit-web-view src="https://www.baidu.com/"></onekit-web-view>
+<!-- <onekit-web-view src="https://www.baidu.com/"></onekit-web-view> -->

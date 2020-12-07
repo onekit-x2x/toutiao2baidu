@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 // import {STRING} from 'oneutil'
-// import CanvasContext from './api/CanvasContext'
 // import VideoContext from './api/VideoContext'
 // import LivePlayerContext from './api/LivePlayerContext'
 // import CameraContext from './api/CameraContext'

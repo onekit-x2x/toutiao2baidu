@@ -24,7 +24,7 @@ export default class tt {
     // baidu is not surpport
   }
 
-  static exitMiniProgram() {
+  static exitSmartprogram() {
     // baidu is not support
   }
 
@@ -782,12 +782,12 @@ return swan.stopBluetoothDevicesDiscovery(object);
     })
   }
 
-  static navigateToMiniProgram(object) {
-    return swan.navigateToMiniProgram(object)
+  static navigateToSmartprogram(object) {
+    return swan.navigateToSmartprogram(object)
   }
 
-  static navigateBackMiniProgram(object) {
-    return swan.navigateBackMiniProgram(object)
+  static navigateBackSmartprogram(object) {
+    return swan.navigateBackSmartprogram(object)
   }
 
   static getAccountInfoSync(object) {

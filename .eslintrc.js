@@ -91,13 +91,12 @@ module.exports = {
   'globals': {
     'window': true,
     'document': true,
+    'getApp':true,
     'App': true,
     'Page': true,
     'Component': true,
     'Behavior': true,
     'swan': true,
     'getCurrentPages': true,
-    'getApp':true,
-    'basement':true
   }
 }

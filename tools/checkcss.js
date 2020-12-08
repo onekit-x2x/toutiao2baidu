@@ -37,12 +37,12 @@ async function getContent(css, filePath, cwd) {
     
     for (const item of currentImportList) {
       // 替换掉 import 语句，不让 less 编译
-      css = css.replace(item.code, `/* *updated for miniprogram-component-plus* ${item.code} */`)
+      css = css.replace(item.code, `/* *updated for Smartprogram-component-plus* ${item.code} */`)
 
       // 处理依赖的 css
-      // const importcss = await _.readFile(item.path)
+      // const importCss = await _.readFile(item.path)
       // // 这里要处理循环依赖的情况
-      // const importInfo = await getContent(importcss, item.path, cwd)
+      // const importInfo = await getContent(importCss, item.path, cwd)
       // // 如果已经处理过了，这里不需要再加入了，否则出现循环引用的情况
       // // if (!importInfo) continue
       // // 获取依赖列表
@@ -90,7 +90,7 @@ module.exports = {
   end() {
     return through.obj(function (file, enc, cb) {
       if (file.isBuffer) {
-        const reg = /\/\*\s\*updated for miniprogram-component-plus\*\s(@import\s+(?:(?:"([^"]+)")|(?:'([^"]+)'));)\s\*\//ig
+        const reg = /\/\*\s\*updated for Smartprogram-component-plus\*\s(@import\s+(?:(?:"([^"]+)")|(?:'([^"]+)'));)\s\*\//ig
         const css = file.contents.toString('utf8').replace(reg, (all, $1) => {
           // 把.less改成.css
           console.log('cssreplace $1 is', $1, $1.replace('.less', '.css').replace('weui-css/src', 'weui-css/dist'))

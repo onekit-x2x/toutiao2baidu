@@ -1,14 +1,7 @@
 {
-    "appid": "17211727",
-    "compilation-args": {
-        "common": {
-            "enhance": true
-        }
-    },
     "host": "baiduboxapp",
-    "projectname": "program",
     "setting": {
-        "urlCheck": false
+        "urlCheck": true
     },
     "swan": {
         "baiduboxapp": {

@@ -454,6 +454,7 @@ class BuildTask {
     gulp.task(`${id}-dev`, gulp.series(`${id}-build`, `${id}-demo`, `${id}-install`))
 
     gulp.task(`${id}-default`, gulp.series(`${id}-build`))
+
   }
 }
 

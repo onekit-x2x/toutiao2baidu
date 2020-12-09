@@ -8,7 +8,7 @@
     "dev": "gulp dev --develop",
     "demo": "gulp demo --develop",
     "watch": "gulp watch --develop --watch",
-    "copy": "sh tools/copy.sh",
+    "copy": "node tools/copy",
     "build": "gulp",
     "dist": "npm run build && npm run copy",
     "clean-dev": "gulp clean --develop",
@@ -41,7 +41,7 @@
     }
   },
   "dependencies": {
-    "oneutil": "latest"
+    "oneutil": "^1.5.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",

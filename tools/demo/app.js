@@ -1,12 +1,13 @@
-App({
-    onLaunch: function () {
-        console.log('App Launch')
+import {OnekitApp} from './toutiao2baidu/index';
+import {tt} from './toutiao2baidu/index';
+OnekitApp({
+    onLaunch:function(){
+        console.log('App Launch');
     },
-    onShow: function () {
-        console.log('App Show')
+    onShow:function(){
+        console.log('App Show');
     },
-    onHide: function () {
-        console.log('App Hide')
-    },
-    ttSavePath2wxStorePath: {}
+    onHide:function(){
+        console.log('App Hide');
+    }
 });

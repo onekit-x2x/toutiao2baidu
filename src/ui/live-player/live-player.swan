@@ -13,5 +13,5 @@ bindstatechange="live_statechange"
 bindnetstatus="live_netstatus"
 bindfullscreenchange="live_fullscreenchange"
 >
-    <slot></slot>
+    live-player暂不翻译
 </live-player>

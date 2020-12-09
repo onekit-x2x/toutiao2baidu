@@ -9,4 +9,6 @@ bindtouchstart="canvas_touchstart"
 bindtouchmove="canvas_touchmove"
 bindtouchend="canvas_touchend"
 bindtouchcancel="canvas_touchcancel"
-></canvas>
+>
+</canvas>
+canvas暂不翻译

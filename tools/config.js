@@ -70,9 +70,9 @@ module.exports = {
       assetFilter: assetFilename => assetFilename.endsWith('.js')
     }
   },
-  ignore: ['!./weui-css/**/*'], // 要忽
-  copyIgnore: ['!./weui-css/node_modules/**/*', '!./weui-css/src/**/*', '!./weui-css/dist/example/**/*', '!./weui-css/dist/app.css', '!./weui-css/dist/style/base/**/*', '!./weui-css/dist/style/widget/**/*'], // 要忽略的目录/文件
+  ignore: [], // 要忽
+  copyIgnore: [], // 要忽略的目录/文件
   copy: {
-    src: ['./**/*.png', './static/**/*', './**/*.css', './**/*.wxs']
+    src: ['./**/*.png', './static/**/*', './**/*.css', './**/*.sjs']
   }, // 将会复制到目标目录
 }

@@ -1,11 +1,11 @@
 {
     "pages": [
-        "li/li"
+        "example/example"
     ],
     "window": {
-        "navigationBarBackgroundColor": "#ffffff",
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "智能小程序",
-        "backgroundTextStyle": "light"
+        "backgroundColor": "#f8f8f8",
+        "navigationBarBackgroundColor": "#f8f8f8",
+        "navigationBarTitleText": "小程序能力",
+        "navigationBarTextStyle": "black"
     }
 }

@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText":"slider",
+	"usingComponents":{
+		"onekit-slider":"../x2baidu/ui/slider/slider"
+	}
+}

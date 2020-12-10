@@ -11,7 +11,7 @@ const gulpInstall = require('gulp-install')
 
 const config = require('./config')
 const checkComponents = require('./checkcomponents')
-const checkCss = require('./checkcss')
+const checkcss = require('./checkcss')
 const _ = require('./utils')
 
 const cssConfig = config.css || {}
@@ -29,10 +29,10 @@ function css(cssFileList) {
     cssFileList = cssFileList.concat(config.ignore)
   }
   return gulp.src(cssFileList, {cwd: srcPath, base: srcPath})
-    .pipe(checkCss.start()) // 开始处理 import
+    .pipe(checkcss.start()) // 开始处理 import
     // .pipe(gulpif(cssConfig.less && cssConfig.sourcemap, sourcemaps.init()))
     // .pipe(gulpif(cssConfig.less, less({paths: [srcPath]})))
-    .pipe(checkCss.end()) // 结束处理 import
+    .pipe(checkcss.end()) // 结束处理 import
     .pipe(rename({extname: '.css'}))
     .pipe(gulpif(cssConfig.less && cssConfig.sourcemap, sourcemaps.write('./')))
     .pipe(_.logger(cssConfig.less ? 'generate' : undefined))
@@ -49,10 +49,10 @@ function buildLess(lessFileList) {
   // }
   // console.log('build less', lessFileList, srcPath)
   return gulp.src(lessFileList, {cwd: srcPath, base: srcPath})
-    // .pipe(checkCss.start()) // 开始处理 import
+    // .pipe(checkcss.start()) // 开始处理 import
     .pipe(gulpif(cssConfig.less && cssConfig.sourcemap, sourcemaps.init()))
     .pipe(gulpif(cssConfig.less, less({paths: [srcPath], compress: true})))
-    // .pipe(checkCss.end()) // 结束处理 import
+    // .pipe(checkcss.end()) // 结束处理 import
     .pipe(rename({extname: '.css'}))
     .pipe(gulpif(cssConfig.less && cssConfig.sourcemap, sourcemaps.write('./')))
     .pipe(_.logger(cssConfig.less ? 'generate' : undefined))
@@ -216,7 +216,7 @@ class BuildTask {
       const demoDist = config.demoDist
 
       // 不检查demo是否存在
-      // isDemoExists = await _.checkFileExists(path.join(demoDist, 'project.swan.json'))
+      // isDemoExists = await _.checkFileExists(path.join(demoDist, 'project.config.json'))
     }, done => {
       if (!isDemoExists) {
         const demoSrc = config.demoSrc
@@ -281,12 +281,12 @@ class BuildTask {
      * 拷贝 swan 文件到目标目录
      */
     gulp.task(`${id}-component-swan`, done => {
-      const swanFileList = this.componentListMap.swanFileList
+      const wxmlFileList = this.componentListMap.wxmlFileList
 
-      if (swanFileList &&
-        swanFileList.length &&
-        !_.compareArray(this.cachedComponentListMap.swanFileList, swanFileList)) {
-        return copy(swanFileList)
+      if (wxmlFileList &&
+        wxmlFileList.length &&
+        !_.compareArray(this.cachedComponentListMap.wxmlFileList, wxmlFileList)) {
+        return copy(wxmlFileList)
       }
 
       return done()
@@ -379,8 +379,8 @@ class BuildTask {
      * 监听 swan 变化
      */
     gulp.task(`${id}-watch-swan`, () => {
-      this.cachedComponentListMap.swanFileList = null
-      return gulp.watch(this.componentListMap.swanFileList, {cwd: srcPath, base: srcPath}, gulp.series(`${id}-component-swan`))
+      this.cachedComponentListMap.wxmlFileList = null
+      return gulp.watch(this.componentListMap.wxmlFileList, {cwd: srcPath, base: srcPath}, gulp.series(`${id}-component-swan`))
     })
 
     /**
@@ -454,7 +454,6 @@ class BuildTask {
     gulp.task(`${id}-dev`, gulp.series(`${id}-build`, `${id}-demo`, `${id}-install`))
 
     gulp.task(`${id}-default`, gulp.series(`${id}-build`))
-
   }
 }
 

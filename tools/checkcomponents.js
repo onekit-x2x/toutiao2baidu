@@ -55,7 +55,7 @@ async function checkIncludedComponents(jsonPath, componentListMap) {
   // 进入存储
   let exists = await _.checkFileExists(path.join(dirPath, `${fileName}.swan`))
   if (exists) {
-    componentListMap.swanFileList.push(`${fileBase}.swan`)
+    componentListMap.wxmlFileList.push(`${fileBase}.swan`)
   }
   exists = await _.checkFileExists(path.join(dirPath, `${fileName}.css`))
   exists && componentListMap.cssFileList.push(`${fileBase}.css`)
@@ -78,7 +78,7 @@ async function checkIncludedComponents(jsonPath, componentListMap) {
 
 module.exports = async function (entry) {
   const componentListMap = {
-    swanFileList: [],
+    wxmlFileList: [],
     cssFileList: [],
     lessFileList: [],
     jsonFileList: [],

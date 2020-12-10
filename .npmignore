@@ -12,6 +12,5 @@ test
 tools
 docs
 smartprogram_dev/
-smartprogram_dev/app.json
 node_modules
 coverage

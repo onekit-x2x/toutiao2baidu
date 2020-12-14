@@ -1,14 +1,14 @@
 <slider
-    id="{{onekitId}}"
     class="onekit-slider {{onekitClass}}"
     style="{{onekitStyle}}"
+    id="{{onekitId}}"
 
     min="{{min}}"
     max="{{max}}"
     step="{{step}}"
     disabled="{{disabled}}"
     value="{{value}}"
-    backgroundColor="{{backgroundColor || color}}"
+    backgroundColor="{{color||backgroundColor}}"
     block-size="{{blockSize}}"
     block-color="{{blockColor}}"
     activeColor="{{activeColor || selectedColor}}"

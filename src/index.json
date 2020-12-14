@@ -1,14 +1,14 @@
 {
   "usingComponents": {
-    "ad": "./ui/ad/ad",
-    "camera":"./ui/camera/camera",
-    "canvas":"./ui/canvas/canvas",
-    "live-player":"./ui/live-player/live-player",
-    "slider":"./ui/slider/slider",
-    "swiper":"./ui//swiper/swiper",
-    "text":"./ui/text/text",
-    "video":"./ui/video/video",
-    "view":"./ui/view/view",
-    "web-view":"./ui/web-view/web-view"
+    "ad": "./ui/ad/ad/index",
+    "camera":"./ui/camera/camera/index",
+    "canvas":"./ui/canvas/canvas/index",
+    "live-player":"./ui/live-player/live-player/index",
+    "slider":"./ui/slider/slider/index",
+    "swiper":"./ui/swiper/swiper/index",
+    "text":"./ui/text/text/index",
+    "video":"./ui/video/video/index",
+    "view":"./ui/view/view/index",
+    "web-view":"./ui/web-view/web-view/index"
   }
 }

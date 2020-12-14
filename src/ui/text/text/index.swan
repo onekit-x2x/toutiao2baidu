@@ -7,5 +7,5 @@ space="{{space}}"
 selectable="{{selectable}}"
 >
 {{value}}
-<slot></slot>
+<slot/>
 </text>

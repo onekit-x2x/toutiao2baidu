@@ -123,3 +123,7 @@ smartprogram_dev/package.json
 smartprogram_dev/toutiao2baidu/package.json
 smartprogram_dev/toutiao2baidu/ui/canvas/canvas.swan
 smartprogram_dev/toutiao2baidu/ui/live-player/live-player.swan
+smartprogram_dev/.swan/editor.json
+smartprogram_dev/app.css
+smartprogram_dev/app.js
+smartprogram_dev/project.swan.json

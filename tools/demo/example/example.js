@@ -1,5 +1,5 @@
-import {OnekitPage} from '../x2baidu/index';
-import {tt} from '../x2baidu/index';
+import {OnekitPage} from '../toutiao2baidu/index';
+import {tt} from '../toutiao2baidu/index';
 const pageData = {
     onShareAppMessage:function(){
         return {

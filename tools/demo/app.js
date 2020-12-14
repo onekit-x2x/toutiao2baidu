@@ -1,5 +1,5 @@
-import {OnekitApp} from './x2baidu/index';
-import {tt} from './x2baidu/index';
+import {OnekitApp} from './toutiao2baidu/index';
+import {tt} from './toutiao2baidu/index';
 OnekitApp({
     onLaunch:function(){
         console.log('App Launch');

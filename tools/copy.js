@@ -4,21 +4,19 @@ const path = require('path')
 const { exec } = require('child_process');
 
 const cwd = process.cwd()
-const root = 'Smartprogram_npm'
-const dist = 'Smartprogram_dist'
+const dist = 'smartprogram_dist'
 
-/*
 const list = fs.readdirSync(path.join(cwd, dist))
-fs.removeSync(root)
 list.forEach(file => {
     const stat = fs.lstatSync(path.join(cwd, dist, file))
-    if (stat.isDirectory() && file !== 'weui-css') {
-        const npmDist =  path.join(cwd, root, file, dist)
-        fs.ensureDirSync(npmDist)
-        exec(`cp -a ${dist}/${file}/* ${root}/${file}/${dist}`)
-        exec(`cp -a src/${file}/package.json ${root}/${file}/package.json`)
+    if (stat.isDirectory() && (['ui'].includes(file))) {
+        const ui = fs.readdirSync(path.join(cwd, dist,file))
+        ui.forEach(name => {
+            const pkg = fs.readFileSync(`${cwd}/src/${file}/${name}/${name}/package.json`)
+            fs.writeFileSync(`${cwd}/${dist}/${file}/${name}/${name}/package.json`,pkg)
+        })
     }
-})*/
+})
 const package = JSON.parse(fs.readFileSync(`${cwd}/package.json`));
 const url = `${path.join(cwd, dist)}/package.json`;
 const dist_package = JSON.parse(fs.readFileSync(url));

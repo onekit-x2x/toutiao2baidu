@@ -31,16 +31,15 @@ Component({
       value: 0
     },
     color: {
-      type: String,
-      value: '#e9e9e9'
+      type: String
     },
     selectedColor: {
       type: String,
-      value: '#1aad19'
+      value: '#F85959'
     },
     activeColor: {
       type: String,
-      value: '#1aad19'
+      value: '#F85959'
     },
     backgroundColor: {
       type: String,

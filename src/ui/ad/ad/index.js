@@ -2,10 +2,13 @@
 /* eslint-disable camelcase */
 import onekit_behavior from '../../../behavior/onekit_behavior'
 import wxs_behavior from '../../../behavior/wxs_behavior'
-import weixin_behavior from '../../../behavior/weixin_behavior'
+import toutiao_behavior from '../../../behavior/toutiao_behavior'
 
 Component({
-  behaviors: [onekit_behavior, wxs_behavior, weixin_behavior],
+  behaviors: [onekit_behavior, wxs_behavior, toutiao_behavior],
+  options: {
+    addGlobalClass: true,
+  },
   properties: {
     unitId: {
       type: String,
@@ -46,7 +49,7 @@ Component({
     //
     // let type = this.properties.type
     // const scale = this.properties.scale
-    // swan.createSelectorQuery().select('.onekit-ad').boundingClientRect(rect => {
+    // swan.createSelectorQuery().select('onekit-ad').boundingClientRect(rect => {
     //   console.log('节点信息', rect)
     // }).exec()
     // if (type) {

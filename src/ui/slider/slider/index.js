@@ -2,10 +2,10 @@
 /* eslint-disable camelcase */
 import onekit_behavior from '../../../behavior/onekit_behavior'
 import wxs_behavior from '../../../behavior/wxs_behavior'
-import weixin_behavior from '../../../behavior/weixin_behavior'
+import toutiao_behavior from '../../../behavior/toutiao_behavior'
 
 Component({
-  behaviors: [onekit_behavior, wxs_behavior, weixin_behavior],
+  behaviors: [onekit_behavior, wxs_behavior, toutiao_behavior],
   options: {
     addGlobalClass: true,
   },
@@ -34,8 +34,7 @@ Component({
       type: String
     },
     selectedColor: {
-      type: String,
-      value: '#F85959'
+      type: String
     },
     activeColor: {
       type: String,
@@ -43,7 +42,7 @@ Component({
     },
     backgroundColor: {
       type: String,
-      value: '#e9e9e9'
+      value: '#ddd'
     },
     blockSize: {
       type: Number,

@@ -1,14 +1,10 @@
 {
   "usingComponents": {
     "ad": "./ui/ad/ad/index",
-    "camera":"./ui/camera/camera/index",
-    "canvas":"./ui/canvas/canvas/index",
-    "live-player":"./ui/live-player/live-player/index",
+    "progress":"./ui/progress/progress/index",
     "slider":"./ui/slider/slider/index",
-    "swiper":"./ui/swiper/swiper/index",
     "text":"./ui/text/text/index",
     "video":"./ui/video/video/index",
-    "view":"./ui/view/view/index",
     "web-view":"./ui/web-view/web-view/index"
   }
 }

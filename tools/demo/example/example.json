@@ -1,6 +1,0 @@
-{
-	"navigationBarTitleText":"slider",
-	"usingComponents":{
-		"onekit-slider":"../toutiao2baidu/ui/slider/slider"
-	}
-}

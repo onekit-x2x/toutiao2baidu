@@ -6,6 +6,5 @@ id="{{onekitId}}"
 space="{{space}}"
 selectable="{{selectable}}"
 >
-{{value}}
-<slot/>
+<slot>{{value}}</slot>
 </text>

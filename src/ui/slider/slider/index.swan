@@ -11,7 +11,7 @@
     backgroundColor="{{color||backgroundColor}}"
     block-size="{{blockSize}}"
     block-color="{{blockColor}}"
-    activeColor="{{activeColor || selectedColor}}"
+    activeColor="{{selectedColor || activeColor}}"
     show-value="{{showValue}}"
 
     bindchange="slider_Change"

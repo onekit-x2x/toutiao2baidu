@@ -1,10 +1,10 @@
 page{
   --onekit-REM:32rpx;
 }
-[style*="flex-direction:column"]>view{
+/* [style*="flex-direction:column"]> */view{
   flex: auto !important;
 }
-.onekit-picker-view{
+onekit-picker-view{
 width:100%;
 display:flex;
 }
@@ -32,130 +32,130 @@ display:flex;
   margin-right:.2em; */
 }
 
-.onekit-icon-download:before{
+onekit-icon-download:before{
   content:"\e60a";
 }
-.onekit-icon-info:before{
+onekit-icon-info:before{
   content:"\e611";
 }
-.onekit-icon-safe-success:before{
+onekit-icon-safe-success:before{
   content:"\EA04";
 }
-.onekit-icon-safe-warn:before{
+onekit-icon-safe-warn:before{
   content:"\EA05";
 }
-.onekit-icon-success:before{
+onekit-icon-success:before{
   content:"\e60d";
 }
-.onekit-icon-success-circle:before{
+onekit-icon-success-circle:before{
   content:"\EA07";
 }
-.onekit-icon-success_no_circle:before{
+onekit-icon-success_no_circle:before{
   content:"\e60c";
 }
-.onekit-icon-waiting:before{
+onekit-icon-waiting:before{
   content:"\e60e";
 }
-.onekit-icon-waiting-circle:before{
+onekit-icon-waiting-circle:before{
   content:"\EA0A";
 }
-.onekit-icon-warn:before{
+onekit-icon-warn:before{
   content:"\e610";
 }
-.onekit-icon-info_circle:before{
+onekit-icon-info_circle:before{
   content:"\EA0C";
 }
-.onekit-icon-cancel:before{
+onekit-icon-cancel:before{
   content:"\e60f";
 }
-.onekit-icon-search:before{
+onekit-icon-search:before{
   content:"\e608";
 }
-.onekit-icon-clear:before{
+onekit-icon-clear:before{
   content:"\e60b";
 }
-.onekit-icon-back:before{
+onekit-icon-back:before{
   content:"\EA10";
 }
-.onekit-icon-delete:before{
+onekit-icon-delete:before{
   content:"\EA11";
 }
 [class^="onekit-icon_"]:before{color: rebeccapurple;}
 [class^="onekit-icon_"]:before{
   margin:0;
 }
-.onekit-icon-success{
+onekit-icon-success{
   font-size:23px;
   color:#F95959;
 }
-.onekit-icon-waiting{
+onekit-icon-waiting{
   font-size:23px;
   color:#50ABF9;
 }
-.onekit-icon-warn{
+onekit-icon-warn{
   font-size:23px;
   color:#f5a623;
 }
-.onekit-icon-info{
+onekit-icon-info{
   font-size:23px;
   color:#CACACA;
 }
-.onekit-icon-success-circle{
+onekit-icon-success-circle{
   font-size:23px;
   color:#09BB07;
 }
-.onekit-icon-success_no_circle{
+onekit-icon-success_no_circle{
   font-size:23px;
   color:#F95959;
 }
-.onekit-icon-waiting-circle{
+onekit-icon-waiting-circle{
   font-size:23px;
   color:#10AEFF;
 }
-.onekit-icon-circle{
+onekit-icon-circle{
   font-size:23px;
   color:#C9C9C9;
 }
-.onekit-icon-download{
+onekit-icon-download{
   font-size:23px;
   color:#222222;
 }
-.onekit-icon-info_circle{
+onekit-icon-info_circle{
   font-size:23px;
   color:#09BB07;
 }
-.onekit-icon-safe-success{
+onekit-icon-safe-success{
   color:#09BB07;
 }
-.onekit-icon-safe-warn{
+onekit-icon-safe-warn{
   color:#FFBE00;
 }
-.onekit-icon-cancel{
+onekit-icon-cancel{
   color:#222222;
   font-size:22px;
 }
-.onekit-icon-search{
+onekit-icon-search{
   color:#222222;
   font-size:14px;
 }
-.onekit-icon-clear{
+onekit-icon-clear{
   color:#F95959;
   font-size:14px;
 }
-.onekit-icon-delete.onekit-icon_gallery-delete{
+onekit-icon-deleteonekit-icon_gallery-delete{
   color:#FFFFFF;
   font-size:22px;
 }
-.onekit-icon_msg{
+onekit-icon_msg{
   font-size:93px;
 }
-.onekit-icon_msg.onekit-icon-warn{
+onekit-icon_msgonekit-icon-warn{
   color:#F76260;
 }
-.onekit-icon_msg-primary{
+onekit-icon_msg-primary{
   font-size:93px;
 }
-.onekit-icon_msg-primary.onekit-icon-warn{
+onekit-icon_msg-primaryonekit-icon-warn{
   color:#FFBE00;
 }
 
@@ -180,6 +180,7 @@ wx-switch .wx-switch-input.wx-switch-input-checked {
   border-color: #F85959;
   background-color: #F85959;
 }
+
 /**/
 button[type=primary] {
     color: rgba(255,255,255,1);
@@ -192,18 +193,18 @@ background-color:rgba(222,79,79,1);
 
 }
 button[loading][type=primary] {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 1);
     background-color: rgba(222,79,79,1);
 }
 button[disabled][type=primary] {
     background-color: rgba(252,192,193,1);
     color: rgba(255,255,255,0.4);
 }
-button[loading][type=default] {
+/* button[loading][type=default] {
     color: rgba(34,34,34,0.6);
     background-color: rgba(219,220,220,1);
     border-color: rgba(216,216,216,1);
-}
+} */
 button[size=mini] {
     display: inline-block;
     line-height: 2.3;

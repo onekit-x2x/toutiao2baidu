@@ -173,7 +173,6 @@ onekit-radio-group{
 }
 /* slider */
 onekit-slider{
-    margin: 10px 18px;
     padding: 0;
     display: block;
 }
@@ -184,10 +183,7 @@ onekit-switch{
 }
 /*text*/
 onekit-text{
-    
-    display: block;
     white-space: normal;
-
 }
 /* textarea */
 onekit-textarea{

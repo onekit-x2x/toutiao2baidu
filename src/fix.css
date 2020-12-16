@@ -173,10 +173,26 @@ onekit-icon_msg-primary.onekit-icon-warn{
     color:#f95959;
   }*/
   /**/
-/* swan-switch .swan-switch-input.swan-switch-input-checked {
-  border-color: #F85959;
-  background-color: #F85959;
-} */
+swan-switch .swan-switch-input{
+    background-color:#fff;
+    border: 1px solid #DFDFDF;
+    width: 52px;
+    height: 32px;
+    border-radius: 16px;
+}
+swan-switch .swan-switch-input.swan-switch-input-checked:after{
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+}
+swan-switch .swan-switch-input:after{
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
 
 /**/
 button[type=primary] {
@@ -215,14 +231,13 @@ swan-checkbox .swan-checkbox-input{
   height:22px;
   position:relative;
 }
-/* 
-swan-checkbox .swan-checkbox-input.swan-checkbox-input-checked{
-color:#FFFFFF;
-background-color:#f85959;
+/*
+swan-checkbox .swan-checkbox-input{
+    color:#FFFFFF;
+    background-color:#f85959;
 }
-swan-radio .swan-radio-input.swan-radio-input-checked{
-  color:#FFFFFF;
-background-color:#f85959;
-  border:1px solid #f85959;
-
-} */
+*/
+swan-radio .swan-radio-input{
+    width: 22px;
+    height: 22px;
+}

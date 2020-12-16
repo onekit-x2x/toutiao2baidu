@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "ad": "./ui/ad/ad/index",
+    "icon": "./ui/icon/icon/index",
     "progress":"./ui/progress/progress/index",
     "slider":"./ui/slider/slider/index",
     "text":"./ui/text/text/index",

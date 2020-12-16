@@ -10,5 +10,4 @@ activeColor="{{activeColor}}"
 backgroundColor="{{backgroundColor}}"
 active="{{active}}"
 active-mode="{{activeMode}}"
-animation="{{animation}}"
 />

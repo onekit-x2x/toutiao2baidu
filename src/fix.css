@@ -1,7 +1,7 @@
 page{
   --onekit-REM:32rpx;
 }
-/* [style*="flex-direction:column"]> */view{
+[style*=column]>view {
   flex: auto !important;
 }
 onekit-picker-view{

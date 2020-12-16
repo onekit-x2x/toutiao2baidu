@@ -157,26 +157,26 @@ onekit-icon_msg-primary.onekit-icon-warn{
 }
 
 /*
-.wx-icon-success:before{
+.swan-icon-success:before{
   color:#F85959;
   }
-  .wx-icon-success_no_circle:before{
+  .swan-icon-success_no_circle:before{
   color:#F85959;
   }
-  .wx-icon-info:before{
+  .swan-icon-info:before{
     color:#CACACA;
   }
- .wx-icon-warn:before{
+ .swan-icon-warn:before{
     color:#f5a623;
   }
-  .wx-icon-clear:before{
+  .swan-icon-clear:before{
     color:#f95959;
   }*/
   /**/
-wx-switch .wx-switch-input.wx-switch-input-checked {
+/* swan-switch .swan-switch-input.swan-switch-input-checked {
   border-color: #F85959;
   background-color: #F85959;
-}
+} */
 
 /**/
 button[type=primary] {
@@ -197,11 +197,7 @@ button[disabled][type=primary] {
     background-color: rgba(252,192,193,1);
     color: rgba(255,255,255,0.4);
 }
-/* button[loading][type=default] {
-    color: rgba(34,34,34,0.6);
-    background-color: rgba(219,220,220,1);
-    border-color: rgba(216,216,216,1);
-} */
+
 button[size=mini] {
     display: inline-block;
     line-height: 2.3;
@@ -209,7 +205,7 @@ button[size=mini] {
     padding: 0 1.34em;
 }
 
-wx-checkbox .wx-checkbox-input{
+swan-checkbox .swan-checkbox-input{
   margin-right:5px;
   -webkit-application:none;
   outline:0;
@@ -219,13 +215,14 @@ wx-checkbox .wx-checkbox-input{
   height:22px;
   position:relative;
 }
-wx-checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+/* 
+swan-checkbox .swan-checkbox-input.swan-checkbox-input-checked{
 color:#FFFFFF;
 background-color:#f85959;
 }
-wx-radio .wx-radio-input.wx-radio-input-checked{
+swan-radio .swan-radio-input.swan-radio-input-checked{
   color:#FFFFFF;
 background-color:#f85959;
   border:1px solid #f85959;
 
-}
+} */

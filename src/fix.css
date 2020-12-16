@@ -18,7 +18,6 @@ display:flex;
 }
 onekit-icon>view{
   display:inline-block;
-  vertical-align:middle;
   font:normal normal normal 14px/1 "onekit-icon";
   font-size:inherit;
   text-rendering:auto;

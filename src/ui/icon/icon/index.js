@@ -6,7 +6,7 @@ import toutiao_behavior from '../../../behavior/toutiao_behavior'
 Component({
   behaviors: [onekit_behavior, toutiao_behavior],
   options: {
-    virtualHost: true
+    addGlobalClass: true
   },
   properties: {
     type: {type: String, value: ''},

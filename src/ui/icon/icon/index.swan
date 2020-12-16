@@ -1,4 +1,4 @@
-<icon
+<view
 class="onekit-icon-{{type}} {{onekitClass}}" 
 style="color:{{color}};font-size:{{size}}px;{{onekitStyle}}"
 id="{{onekitId}}"
@@ -6,4 +6,4 @@ type="{{type}}"
 size="{{size}}"
 color="{{color}}"
 >
-</icon>
+</view>

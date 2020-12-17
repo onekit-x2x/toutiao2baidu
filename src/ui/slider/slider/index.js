@@ -4,7 +4,7 @@ import onekit_behavior from '../../../behavior/onekit_behavior'
 import toutiao_behavior from '../../../behavior/toutiao_behavior'
 
 Component({
-  behaviors: [onekit_behavior, toutiao_behavior],
+  behaviors: [onekit_behavior, toutiao_behavior, 'swan://form-field'],
   options: {
     addGlobalClass: true,
   },

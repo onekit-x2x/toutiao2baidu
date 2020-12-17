@@ -1,0 +1,11 @@
+<view
+class="onekit-radio {{onekitClass}}"
+style="{{onekitStyle}}"
+id="{{onekitId}}"
+
+value="{{value}}"
+disabled="{{disabled}}"
+checked="{{checked}}"
+color="{{color}}"
+>
+</view>

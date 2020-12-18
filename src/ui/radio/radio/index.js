@@ -8,6 +8,9 @@ Component({
   options: {
     addGlobalClass: true,
   },
+  data: {
+    value: ''
+  },
   properties: {
     value: {
       type: String,
@@ -26,4 +29,9 @@ Component({
       value: '#F85959'
     }
   },
+  // attached(e) {
+  //   this.setData({
+  //     value: e.detail.value,
+  //   })
+  // },
 })

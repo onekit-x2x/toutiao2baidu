@@ -8,6 +8,9 @@ Component({
   options: {
     addGlobalClass: true,
   },
+  data: {
+    value: 0
+  },
   properties: {
     min: {
       type: Number,
@@ -27,7 +30,14 @@ Component({
     },
     value: {
       type: Number,
-      value: 0
+      value: 0,
+      observer(newValue) {
+        const value = parseInt(newValue, 10)
+        console.log('[slider observer]', value)
+        this.setData({
+          value
+        })
+      }
     },
     color: {
       type: String
@@ -59,12 +69,15 @@ Component({
 
   methods: {
     slider_Change(e) {
-      console.log('slider_Change', e)
-      this.triggerEvent('change', e.details)
+      const value = e.detail.value
+      console.log('[slider change]', value)
+      this.setData({
+        value
+      })
+      this.triggerEvent('change', {value})
     },
     slider_Changing(e) {
-      console.log('slider_Changing', e)
-      this.triggerEvent('changing', e.details)
+      this.triggerEvent('changing', e.detail)
     }
   }
 })

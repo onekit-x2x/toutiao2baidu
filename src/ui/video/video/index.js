@@ -92,7 +92,7 @@ Component({
       this.triggerEvent('error', e)
     },
     video_timeupdate(e) {
-      this.triggerEvent('timeupdate', e)
+      this.triggerEvent('timeupdate', e.detail)
     },
     video_fullscreenchange(e) {
       this.triggerEvent('fullscreenchange', e)

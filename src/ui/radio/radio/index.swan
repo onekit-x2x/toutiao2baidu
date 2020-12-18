@@ -1,4 +1,4 @@
-<view
+<radio
 class="onekit-radio {{onekitClass}}"
 style="{{onekitStyle}}"
 id="{{onekitId}}"
@@ -8,4 +8,4 @@ disabled="{{disabled}}"
 checked="{{checked}}"
 color="{{color}}"
 >
-</view>
+</radio>

@@ -17,14 +17,4 @@ Component({
     active: {type: Boolean, value: false},
     activeMode: {type: String, value: 'backwards'},
   },
-  data: {},
-  attached() {
-
-  },
-
-  detached() {},
-
-  methods: {
-
-  }
 })

@@ -27,8 +27,8 @@ Component({
     },
   },
   methods: {
-    checkbox_change(e) {
-      this.triggerEvent('change', e)
+    switch_change(e) {
+      this.triggerEvent('change', e.details)
     },
   }
 })

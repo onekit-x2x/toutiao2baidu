@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import thekit from 'oneutil'
+import STRING from 'oneutil/STRING'
 import tt from './tt'
 
 export default function OnekitBehavior(object) {
@@ -51,7 +51,7 @@ export default function OnekitBehavior(object) {
   if (object) {
     if (!object.methods) { object.methods = {} }
     object.methods.triggerEvent = function (name, data) {
-      const funcName = `on${thekit.firstUpper(name)}`
+      const funcName = `on${STRING.firstUpper(name)}`
       if (this.props[funcName]) {
         this.props[funcName](data)
       }

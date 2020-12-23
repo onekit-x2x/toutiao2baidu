@@ -11,4 +11,3 @@ binderror="ad_error"
 bindload="ad_load"
 bindclose="ad_close"
 ></ad>
-ad暂不翻译

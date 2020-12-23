@@ -28,7 +28,6 @@ Component({
           }
         }
         const checked = fixBoolean(newValue)
-        console.log('[switch observer]', checked)
         this.setData({
           value: checked
         })
@@ -50,7 +49,6 @@ Component({
   methods: {
     switch_change(e) {
       const checked = e.detail.checked
-      console.log('[switch change]', checked)
       this.setData({
         value: checked
       })

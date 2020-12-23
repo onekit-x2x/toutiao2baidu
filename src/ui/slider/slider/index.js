@@ -33,7 +33,6 @@ Component({
       value: 0,
       observer(newValue) {
         const value = parseInt(newValue, 10)
-        console.log('[slider observer]', value)
         this.setData({
           value
         })
@@ -70,7 +69,6 @@ Component({
   methods: {
     slider_Change(e) {
       const value = e.detail.value
-      console.log('[slider change]', value)
       this.setData({
         value
       })

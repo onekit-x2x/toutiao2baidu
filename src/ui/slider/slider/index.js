@@ -72,10 +72,10 @@ Component({
       this.setData({
         value
       })
-      this.triggerEvent('change', {value})
+      this.triggerEvent('Change', {value})
     },
     slider_Changing(e) {
-      this.triggerEvent('changing', e.detail)
+      this.triggerEvent('Changing', e.detail)
     }
   }
 })

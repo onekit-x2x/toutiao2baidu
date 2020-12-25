@@ -52,7 +52,7 @@ Component({
       this.setData({
         value: checked
       })
-      this.triggerEvent('change', {checked})
+      this.triggerEvent('Change', {checked})
     },
   }
 })

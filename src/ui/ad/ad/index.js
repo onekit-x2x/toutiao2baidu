@@ -83,13 +83,13 @@ Component({
 
   methods: {
     ad_load(e) {
-      this.triggerEvent('load', e)
+      this.triggerEvent('Load', e)
     },
     ad_error(e) {
-      this.triggerEvent('error', e)
+      this.triggerEvent('Error', e)
     },
     ad_close(e) {
-      this.triggerEvent('close', e)
+      this.triggerEvent('Close', e)
     },
   }
 })

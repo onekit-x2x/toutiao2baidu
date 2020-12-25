@@ -80,42 +80,42 @@ Component({
   },
   methods: {
     video_play(e) {
-      this.triggerEvent('play', e)
+      this.triggerEvent('Play', e)
     },
     video_pause(e) {
-      this.triggerEvent('pause', e)
+      this.triggerEvent('Pause', e)
     },
     video_ended(e) {
-      this.triggerEvent('ended', e)
+      this.triggerEvent('Ended', e)
     },
     video_error(e) {
-      this.triggerEvent('error', e)
+      this.triggerEvent('Error', e)
     },
     video_timeupdate(e) {
-      this.triggerEvent('timeupdate', e.detail)
+      this.triggerEvent('Timeupdate', e.detail)
     },
     video_fullscreenchange(e) {
-      this.triggerEvent('fullscreenchange', e)
+      this.triggerEvent('Fullscreenchange', e)
     },
     video_waiting(e) {
-      this.triggerEvent('waiting', e)
+      this.triggerEvent('Waiting', e)
     },
 
     // 广告做不了
     trigger_adstart(e) {
-      this.triggerEvent('adstart', e)
+      this.triggerEvent('Adstart', e)
     },
     trigger_adended(e) {
-      this.triggerEvent('adended', e)
+      this.triggerEvent('Adended', e)
     },
     trigger_adload(e) {
-      this.triggerEvent('adload', e)
+      this.triggerEvent('Adload', e)
     },
     trigger_adclose(e) {
-      this.triggerEvent('adclose', e)
+      this.triggerEvent('Adclose', e)
     },
     trigger_aderror(e) {
-      this.triggerEvent('aderror', e)
+      this.triggerEvent('Aderror', e)
     },
   }
 })

@@ -102,19 +102,19 @@ Component({
     },
 
     // 广告做不了
-    trigger_adstart(e) {
+    _trigger_adstart(e) {
       this.triggerEvent('Adstart', e)
     },
-    trigger_adended(e) {
+    _trigger_adended(e) {
       this.triggerEvent('Adended', e)
     },
-    trigger_adload(e) {
+    _trigger_adload(e) {
       this.triggerEvent('Adload', e)
     },
-    trigger_adclose(e) {
+    _trigger_adclose(e) {
       this.triggerEvent('Adclose', e)
     },
-    trigger_aderror(e) {
+    _trigger_aderror(e) {
       this.triggerEvent('Aderror', e)
     },
   }

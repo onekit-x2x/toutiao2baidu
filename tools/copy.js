@@ -12,10 +12,6 @@ list.forEach(file => {
     if (stat.isDirectory() && (['ui'].includes(file))) {
         const ui = fs.readdirSync(path.join(cwd, dist,file))
         ui.forEach(name => {
-            /*
-            const pkg = fs.readFileSync(`${cwd}/src/${file}/${name}/${name}/package.json`)
-            fs.writeFileSync(`${cwd}/${dist}/${file}/${name}/${name}/package.json`,pkg)
-            */
            const readable = fs.createReadStream( `${cwd}/src/${file}/${name}/${name}/package.json` );
            const writable = fs.createWriteStream( `${cwd}/${dist}/${file}/${name}/${name}/package.json` ); 
            readable.pipe( writable );
